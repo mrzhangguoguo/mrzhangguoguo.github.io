@@ -1,0 +1,35 @@
+title: "果叔AI世界"
+description: "分享AI出海干货,AI圈最新消息"
+url: https://mrzhangguoguo.github.io
+baseurl: "/my-blog-podcast"
+email: "xjzzxwork@gmail.com"
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+collections:
+  episodes:
+    output: true
+    permalink: /episodes/:slug/
+
+permalink: /posts/:slug/
+
+exclude:
+  - node_modules
+  - Gemfile*
+  - package*.json
+  - claude.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: episodes
+    values:
+      layout: episode

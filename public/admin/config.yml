@@ -1,0 +1,77 @@
+backend:
+  name: github
+  repo: mrzhangguoguo/my-blog-podcast
+  branch: main
+  # For GitHub Pages without OAuth, use test-repo backend for testing
+  # backend:
+  #   name: test-repo
+
+publish_mode: editorial_workflow
+media_folder: "assets/uploads"
+public_folder: "/my-blog-podcast/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Tags", name: "tags", widget: "list", default: [], required: false}
+      - {label: "Published At", name: "published_at", widget: "datetime", required: false, format: "YYYY-MM-DD"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false, hint: "/posts/your-custom-slug/"}
+      - {label: "Canonical URL", name: "canonical", widget: "string", required: false}
+      - {label: "OG Image", name: "og_image", widget: "image", required: false}
+      - {label: "JSON-LD Schema", name: "jsonld", widget: "text", required: false, hint: "Custom JSON-LD structured data"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "episodes"
+    label: "Podcast Episodes"
+    folder: "_episodes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
+      - {label: "Tags", name: "tags", widget: "list", default: [], required: false}
+      - {label: "Published At", name: "published_at", widget: "datetime", required: false, format: "YYYY-MM-DD"}
+      - {label: "Permalink", name: "permalink", widget: "string", hint: "/episodes/episode-slug/"}
+      - {label: "Audio URL", name: "audio_url", widget: "string", hint: "Direct link to MP3 file"}
+      - {label: "Duration (seconds)", name: "duration_sec", widget: "number", required: false}
+      - {label: "Canonical URL", name: "canonical", widget: "string", required: false}
+      - {label: "OG Image", name: "og_image", widget: "image", required: false}
+      - {label: "JSON-LD Schema", name: "jsonld", widget: "text", required: false, hint: "Custom JSON-LD structured data"}
+      - {label: "Show Notes", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "pages/about.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Permalink", name: "permalink", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Home Page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "config"
+    label: "Site Configuration"
+    files:
+      - label: "Site Settings"
+        name: "settings"
+        file: "_config.yml"
+        fields:
+          - {label: "Site Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Site URL", name: "url", widget: "string", hint: "https://username.github.io"}
+          - {label: "Base URL", name: "baseurl", widget: "string", default: "", hint: "Leave empty for user pages"}
+          - {label: "Email", name: "email", widget: "string", required: false}

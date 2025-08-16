@@ -1,0 +1,54 @@
+---
+layout: default
+---
+<article class="episode">
+  <header class="episode-header">
+    <h1 class="episode-title">{{ page.title }}</h1>
+    <div class="episode-meta">
+      <time datetime="{{ page.published_at | default: page.date | date_to_xmlschema }}">
+        {{ page.published_at | default: page.date | date: "%B %d, %Y" }}
+      </time>
+      {% if page.duration_sec %}
+        <span class="duration">{{ page.duration_sec | divided_by: 60 }} min</span>
+      {% endif %}
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="episode-tags">
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tags/{{ tag | uri_escape }}/" class="tag">#{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+  
+  {% if page.audio_url %}
+  <div class="audio-player">
+    <audio controls preload="metadata">
+      <source src="{{ page.audio_url }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+  {% endif %}
+  
+  <div class="episode-content">
+    {{ content }}
+  </div>
+  
+  <footer class="episode-footer">
+    <nav class="episode-nav">
+      {% assign prev_episode = site.episodes | where_exp: "item", "item.date < page.date" | last %}
+      {% assign next_episode = site.episodes | where_exp: "item", "item.date > page.date" | first %}
+      
+      {% if prev_episode %}
+        <a href="{{ prev_episode.url | relative_url }}" class="prev-episode">
+          ← {{ prev_episode.title | truncate: 30 }}
+        </a>
+      {% endif %}
+      {% if next_episode %}
+        <a href="{{ next_episode.url | relative_url }}" class="next-episode">
+          {{ next_episode.title | truncate: 30 }} →
+        </a>
+      {% endif %}
+    </nav>
+  </footer>
+</article>

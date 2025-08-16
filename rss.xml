@@ -1,0 +1,26 @@
+---
+layout: null
+permalink: /rss.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>{{ site.title | xml_escape }}</title>
+  <description>{{ site.description | xml_escape }}</description>
+  <link>{{ site.url }}{{ site.baseurl }}</link>
+  <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+  <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+  <ttl>60</ttl>
+  
+  {% assign posts = site.posts | where_exp: "post", "post.draft != true" %}
+  {% for post in posts limit: 20 %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.excerpt | default: post.content | strip_html | xml_escape | truncate: 400 }}</description>
+      <pubDate>{{ post.published_at | default: post.date | date_to_rfc822 }}</pubDate>
+      <link>{{ site.url }}{{ site.baseurl }}{{ post.url }}</link>
+      <guid isPermaLink="true">{{ site.url }}{{ site.baseurl }}{{ post.url }}</guid>
+    </item>
+  {% endfor %}
+</channel>
+</rss>

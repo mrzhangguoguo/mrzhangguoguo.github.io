@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+  
+  {% include head-seo.html %}
+  
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Podcast" href="{{ '/podcast.xml' | relative_url }}">
+</head>
+<body>
+  {% include navigation.html %}
+  
+  <main class="main-content">
+    {{ content }}
+  </main>
+  
+  <footer class="site-footer">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with Jekyll and hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const icon = document.querySelector('.theme-toggle-icon');
+      icon.textContent = newTheme === 'light' ? '🌙' : '☀️';
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const icon = document.querySelector('.theme-toggle-icon');
+    if (icon) {
+      icon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>
