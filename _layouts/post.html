@@ -13,7 +13,7 @@ layout: default
         <h1 class="post-title">{{ page.title }}</h1>
         <div class="post-meta">
           <time datetime="{{ page.published_at | default: page.date | date_to_xmlschema }}">
-            {{ page.published_at | default: page.date | date: "%B %d, %Y" }}
+            {{ page.published_at | default: page.date | date: "%Y年%-m月%-d日" }}
           </time>
           {% if page.tags and page.tags.size > 0 %}
             <div class="post-tags">

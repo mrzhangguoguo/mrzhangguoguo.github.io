@@ -4,6 +4,8 @@ url: https://mrzhangguoguo.github.io
 baseurl: "/my-blog-podcast"
 email: "xjzzxwork@gmail.com"
 theme: minima
+lang: zh-CN
+timezone: Asia/Shanghai
 
 plugins:
   - jekyll-feed

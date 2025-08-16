@@ -24,7 +24,7 @@ title: Home
             <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             <div class="post-meta">
               <time datetime="{{ post.published_at | default: post.date | date_to_xmlschema }}">
-                {{ post.published_at | default: post.date | date: "%b %d, %Y" }}
+                {{ post.published_at | default: post.date | date: "%Y年%-m月%-d日" }}
               </time>
               {% if post.tags and post.tags.size > 0 %}
                 <div class="tags">
@@ -56,7 +56,7 @@ title: Home
             <h3><a href="{{ episode.url | relative_url }}">{{ episode.title }}</a></h3>
             <div class="episode-meta">
               <time datetime="{{ episode.published_at | default: episode.date | date_to_xmlschema }}">
-                {{ episode.published_at | default: episode.date | date: "%b %d, %Y" }}
+                {{ episode.published_at | default: episode.date | date: "%Y年%-m月%-d日" }}
               </time>
               {% if episode.duration_sec %}
                 <span class="duration">{{ episode.duration_sec | divided_by: 60 }} min</span>
