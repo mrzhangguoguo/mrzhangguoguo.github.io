@@ -1,0 +1,89 @@
+<nav class="toc" id="toc">
+  <h3 class="toc-title">目录</h3>
+  <div class="toc-content" id="toc-content">
+    <!-- 目录将由JavaScript动态生成 -->
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 生成目录
+  function generateTOC() {
+    const article = document.querySelector('.post-content, .episode-content');
+    if (!article) return;
+    
+    const headings = article.querySelectorAll('h2, h3, h4');
+    const tocContent = document.getElementById('toc-content');
+    
+    if (headings.length === 0) {
+      document.getElementById('toc').style.display = 'none';
+      return;
+    }
+    
+    const tocList = document.createElement('ul');
+    tocList.className = 'toc-list';
+    
+    headings.forEach((heading, index) => {
+      // 添加ID到标题
+      if (!heading.id) {
+        heading.id = 'heading-' + index;
+      }
+      
+      const li = document.createElement('li');
+      li.className = 'toc-item toc-' + heading.tagName.toLowerCase();
+      
+      const a = document.createElement('a');
+      a.href = '#' + heading.id;
+      a.textContent = heading.textContent;
+      a.className = 'toc-link';
+      
+      // 平滑滚动
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.getElementById(heading.id);
+        if (target) {
+          const offset = 80; // 导航栏高度
+          const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+      
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+    
+    tocContent.appendChild(tocList);
+  }
+  
+  // 高亮当前章节
+  function highlightCurrentSection() {
+    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4, .episode-content h2, .episode-content h3, .episode-content h4');
+    const tocLinks = document.querySelectorAll('.toc-link');
+    
+    window.addEventListener('scroll', function() {
+      let current = '';
+      const offset = 100;
+      
+      headings.forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        if (rect.top <= offset) {
+          current = heading.id;
+        }
+      });
+      
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
+  
+  generateTOC();
+  highlightCurrentSection();
+});
+</script>

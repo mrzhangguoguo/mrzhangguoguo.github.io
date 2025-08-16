@@ -1,0 +1,27 @@
+<aside class="post-sidebar">
+  <!-- 广告位 -->
+  <div class="sidebar-widget ad-widget">
+    <div class="ad-container">
+      {% if page.sidebar_ad %}
+        <img src="{{ page.sidebar_ad | relative_url }}" alt="推荐内容" />
+      {% else %}
+        <!-- 默认广告图片 -->
+        <img src="{{ '/assets/images/default-ad.png' | relative_url }}" alt="推荐内容" />
+      {% endif %}
+    </div>
+  </div>
+  
+  <!-- 相关文章 -->
+  <div class="sidebar-widget related-posts-widget">
+    <h3 class="widget-title">相关文章</h3>
+    <div class="related-posts">
+      {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 5 %}
+      {% for post in related_posts %}
+        <article class="related-post">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</aside>

@@ -3,11 +3,16 @@ layout: default
 title: Home
 ---
 
-<div class="home">
+<div class="home-wrapper">
+  <!-- Hero Section - Full Width -->
   <section class="hero">
     <h1>{{ site.title }}</h1>
     <p class="hero-description">{{ site.description }}</p>
   </section>
+  
+  <!-- Content with Sidebar -->
+  <div class="content-with-sidebar">
+    <div class="home-content">
 
   <section class="recent-posts">
     <h2>Latest Posts</h2>
@@ -70,4 +75,9 @@ title: Home
       <p>No episodes yet. <a href="/public/admin/">Create your first episode</a>!</p>
     {% endif %}
   </section>
+    </div>
+    
+    <!-- Sidebar -->
+    {% include home-sidebar.html %}
+  </div>
 </div>

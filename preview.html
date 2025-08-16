@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>果叔AI世界 - 预览</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <a class="site-title" href="/">果叔AI世界</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/pages/about">About</a>
+      <a href="/tags/">Tags</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="home-wrapper">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>果叔AI世界</h1>
+        <p class="hero-description">分享AI出海干货,AI圈最新消息</p>
+      </section>
+      
+      <!-- Content with Sidebar -->
+      <div class="content-with-sidebar">
+        <div class="home-content">
+          <section class="recent-posts">
+            <h2>Latest Posts</h2>
+            <div class="post-list">
+              <article class="post-card">
+                <h3><a href="#">Welcome to Your New Blog</a></h3>
+                <div class="post-meta">
+                  <time>August 16, 2025</time>
+                  <div class="tags">
+                    <span class="tag">#welcome</span>
+                    <span class="tag">#jekyll</span>
+                  </div>
+                </div>
+                <p class="post-excerpt">欢迎来到您的新博客！这是一个示例文章...</p>
+              </article>
+            </div>
+          </section>
+          
+          <section class="recent-episodes">
+            <h2>Latest Episodes</h2>
+            <div class="episode-list">
+              <article class="episode-card">
+                <h3><a href="#">Welcome Episode</a></h3>
+                <div class="episode-meta">
+                  <time>August 16, 2025</time>
+                  <span class="duration">15 min</span>
+                </div>
+                <audio controls preload="metadata" class="episode-preview">
+                  <source src="#" type="audio/mpeg">
+                </audio>
+              </article>
+            </div>
+          </section>
+        </div>
+        
+        <!-- Sidebar -->
+        <aside class="home-sidebar">
+          <!-- About Widget -->
+          <div class="sidebar-widget about-widget">
+            <h3 class="widget-title">关于果叔</h3>
+            <div class="about-content">
+              <p>分享AI出海干货，AI圈最新消息。</p>
+              
+              <!-- 微信二维码 -->
+              <div class="contact-section">
+                <h4>微信联系</h4>
+                <div class="qr-code">
+                  <div style="width: 150px; height: 150px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; margin: 0 auto; border-radius: 8px;">
+                    <span style="color: #999;">微信二维码</span>
+                  </div>
+                  <small>扫码添加微信</small>
+                </div>
+              </div>
+              
+              <!-- 邮箱地址 -->
+              <div class="contact-section">
+                <h4>邮箱</h4>
+                <a href="mailto:xjzzxwork@gmail.com" class="email-link">xjzzxwork@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 果叔推荐 -->
+          <div class="sidebar-widget recommendations-widget">
+            <h3 class="widget-title">果叔推荐</h3>
+            <div class="recommendations">
+              <a href="https://code.yoretea.com" target="_blank" rel="noopener" class="recommendation-link">
+                <span class="link-icon">🚀</span>
+                <span class="link-text">Claude Code 国内直连</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- 标签云 -->
+          <div class="sidebar-widget tags-widget">
+            <h3 class="widget-title">热门标签</h3>
+            <div class="tag-cloud">
+              <a href="#" class="tag-item">#AI</a>
+              <a href="#" class="tag-item">#出海</a>
+              <a href="#" class="tag-item">#ChatGPT</a>
+              <a href="#" class="tag-item">#技术</a>
+              <a href="#" class="tag-item">#创业</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 果叔AI世界. Built with Jekyll and hosted on GitHub Pages.</p>
+  </footer>
+  
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      const icon = document.querySelector('.theme-toggle-icon');
+      icon.textContent = newTheme === 'light' ? '🌙' : '☀️';
+    }
+    
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    const icon = document.querySelector('.theme-toggle-icon');
+    if (icon) {
+      icon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>
