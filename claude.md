@@ -1,329 +1,263 @@
-🎯 目标
-	•	托管：GitHub Pages（原生 Jekyll 构建）
-	•	页面：主页、About、标签页(/tags、/tags/<tag>)、文章(/posts/<slug>)、播客(/episodes/<slug>)
-	•	风格：现代极简、艺术感、深浅色模式
-	•	“后台”：Decap CMS（/admin）——增删改查、草稿→发布（PR 工作流）、自定义 permalink、SEO 字段（canonical、og_image、jsonld）
-	•	Feed：/rss.xml（博客）与 /podcast.xml（播客，带 enclosure）
-	•	内容：仓库内 Markdown（frontmatter）
+# 果叔AI世界博客项目 - Claude AI上下文文档
 
-⸻
+## 项目概述
 
-🗂 目录结构
+**项目名称**: 果叔AI世界（my-blog-podcast）
+**项目类型**: Jekyll静态博客 + 播客平台
+**部署平台**: GitHub Pages
+**访问地址**: https://mrzhangguoguo.github.io/my-blog-podcast/
+**开发状态**: 基础功能已完成，可正常使用
 
-.
-├── _config.yml
-├── Gemfile
-├── _includes/
-│   └── head-seo.html        # canonical/OG/JSON-LD
-├── _layouts/
-│   ├── default.html
-│   ├── post.html
-│   └── episode.html
-├── _posts/                  # 文章：YYYY-MM-DD-标题.md（也可自定义 permalink）
-├── _episodes/               # 播客：*.md（自定义 permalink）
+## 项目信息
+
+- **所有者**: mrzhangguoguo
+- **邮箱**: xjzzxwork@gmail.com
+- **主题**: 分享AI出海干货，AI圈最新消息
+- **语言**: 中文（zh-CN）
+- **时区**: Asia/Shanghai
+
+## 技术栈
+
+- **静态生成器**: Jekyll 4.3
+- **托管平台**: GitHub Pages
+- **前端框架**: 原生HTML/CSS/JavaScript
+- **CMS系统**: Decap CMS（原Netlify CMS）
+- **版本控制**: Git
+- **本地开发**: Python/Docker/rbenv（多种方案）
+
+## 已完成功能 ✅
+
+### 核心功能
+1. **博客系统**
+   - Markdown文章支持
+   - 自动生成文章目录（TOC）
+   - 标签分类系统
+   - 文章摘要
+   - 草稿功能
+
+2. **播客系统**
+   - 音频文件管理
+   - 剧集列表
+   - RSS订阅源
+   - 播放器集成
+
+3. **界面设计**
+   - 响应式三栏布局（桌面端）
+   - 左侧悬浮目录（文章页）
+   - 右侧信息边栏（首页/文章页）
+   - 深色/浅色主题切换
+   - 移动端自适应
+
+4. **侧边栏模块**
+   - About介绍
+   - 微信二维码
+   - 邮箱联系
+   - 推荐链接（Claude Code国内直连）
+   - 热门标签云
+   - 广告位
+   - 相关文章
+
+5. **SEO优化**
+   - 中文语言设置
+   - 元标签优化
+   - Open Graph
+   - JSON-LD结构化数据
+   - XML站点地图
+   - RSS订阅
+
+6. **开发工具**
+   - 快速创建文章脚本（new-post.sh）
+   - 一键部署脚本（deploy.sh）
+   - 本地预览服务器（test_server.py）
+   - Docker环境配置
+   - 代理配置支持
+
+## 项目结构
+
+```
+blogs-for-github/
+├── _posts/              # 博客文章
+│   └── YYYY-MM-DD-title.md
+├── _episodes/           # 播客剧集
+├── _layouts/            # 页面模板
+│   ├── default.html    # 基础模板
+│   ├── post.html       # 文章模板
+│   └── episode.html    # 播客模板
+├── _includes/          # 可重用组件
+│   ├── home-sidebar.html    # 首页侧边栏
+│   ├── post-sidebar.html    # 文章侧边栏
+│   ├── toc.html            # 目录组件
+│   └── navigation.html     # 导航栏
+├── assets/
+│   ├── css/
+│   │   └── style.css       # 主样式文件
+│   └── images/
+│       ├── wechat-qr.png   # 微信二维码（需替换）
+│       └── default-ad.png  # 默认广告图（需替换）
 ├── pages/
-│   ├── index.md
-│   └── about.md
-├── tags/
-│   ├── index.html           # 标签索引
-│   └── tag.html             # 单标签模板（通过静态生成）
-├── podcast.xml              # 播客 RSS（自定义模板）
-├── rss.xml                  # 博客 RSS（jekyll-feed 自动生成）
-├── assets/                  # CSS（Tailwind 可选：生成后直接引入）
-└── public/
-    └── admin/               # Decap CMS（index.html + config.yml）
+│   └── about.md           # 关于页面
+├── _config.yml           # Jekyll配置
+├── index.md             # 首页
+├── BLOG_GUIDE.md        # 使用指南
+├── LOCAL_SETUP.md       # 本地环境说明
+└── claude.md           # 本文档
+```
 
+## 文章格式规范
 
-⸻
-
-⚙️ Jekyll 基本配置
-
-# _config.yml
-title: Your Podcast
-description: A modern minimal podcast + blog
-url: https://<USER>.github.io      # 用户主页：用这个
-baseurl: /<REPO>                   # 项目页才需要；用户主页留空
-theme: minima                      # 先用默认主题，后续自定义样式
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-
-collections:
-  episodes:
-    output: true
-    permalink: /episodes/:slug/
-
-# 文章链接：允许前言里自定义 permalink；否则走默认 /year/month/day/title
-permalink: /posts/:slug/
-
-# 构建时排除
-exclude:
-  - node_modules
-  - Gemfile*
-  - package*.json
-
-Gemfile（让 Pages 使用官方白名单版本）
-
-source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
-
-GitHub Pages 会自动构建，无需自配 Actions（保持默认即可）。
-
-⸻
-
-✍️ 内容规范（Frontmatter）
-
-文章（_posts/）
-	•	文件名建议：YYYY-MM-DD-any.md（便于排序）；URL 用 permalink 字段控制
-
+```markdown
 ---
-title: 标题
-tags: [design, life]
-draft: true            # 草稿不会出现在导航/列表（由 CMS 控制合并）
-slug: custom-slug      # 可选；用于默认 permalink
-permalink: /posts/custom-slug/
-canonical: https://example.com/posts/custom-slug
-og_image: https://.../og.jpg
-jsonld: |
-  { "@context":"https://schema.org","@type":"BlogPosting","headline":"标题" }
-published_at: 2025-08-10
 layout: post
+title: "文章标题"
+date: 2025-08-16 10:30:00 +0800
+tags: [AI, 教程, 技术]
+excerpt: "文章摘要，150-160字符"
+sidebar_ad: /assets/images/custom-ad.png  # 可选
+draft: false  # 草稿状态
 ---
-正文（Markdown）
 
-播客（_episodes/）
+文章内容...
+```
+
+## 常用命令
+
+```bash
+# 创建新文章
+./new-post.sh "文章标题"
+
+# 本地预览
+python3 test_server.py
+
+# 部署到GitHub Pages
+./deploy.sh "提交说明"
+
+# Docker完整预览（需配置代理）
+./docker-with-proxy.sh
+```
+
+## 待优化功能 🔧
+
+1. **功能增强**
+   - [ ] 站内搜索
+   - [ ] 评论系统（Giscus/Disqus）
+   - [ ] 访问统计（Google Analytics）
+   - [ ] 相关文章智能推荐
+   - [ ] 文章阅读进度条
+
+2. **性能优化**
+   - [ ] 图片懒加载
+   - [ ] 资源压缩
+   - [ ] PWA支持
+   - [ ] CDN加速
+
+3. **内容管理**
+   - [ ] 分类系统
+   - [ ] 文章系列
+   - [ ] 作者系统
+   - [ ] 多语言支持
+
+## 已知问题
+
+1. **Docker代理问题**
+   - 需要配置socks5://127.0.0.1:1081代理
+   - 或使用国内镜像源
+
+2. **图片占位符**
+   - wechat-qr.png需要替换为实际二维码
+   - default-ad.png需要替换为实际广告图
+
+3. **Jekyll本地安装**
+   - 系统Ruby权限受限
+   - 推荐使用Docker或Python预览
+
+## 开发建议
+
+### 下次迭代方向
+
+1. **内容优先**
+   - 定期发布高质量文章
+   - 建立内容发布计划
+   - 优化SEO关键词
+
+2. **用户体验**
+   - 添加搜索功能
+   - 实现评论互动
+   - 改进移动端体验
+
+3. **商业化**
+   - 接入广告系统
+   - 添加赞助功能
+   - 会员订阅系统
+
+### 技术注意事项
+
+1. **提交规范**
+   - 使用中文commit信息
+   - 包含emoji标识
+   - 详细说明更改内容
+
+2. **图片管理**
+   - 按年月组织目录
+   - 压缩图片大小
+   - 使用描述性文件名
+
+3. **SEO优化**
+   - 每篇文章设置excerpt
+   - 合理使用标签（3-5个）
+   - 优化标题长度（60字符内）
+
+## 环境配置
+
+### Git配置
+```bash
+git config --global http.proxy socks5://127.0.0.1:1081
+git config --global https.proxy socks5://127.0.0.1:1081
+```
+
+### Docker代理
+在Docker Desktop中设置：
+Settings → Resources → Proxies → socks5://127.0.0.1:1081
+
+### Python服务器
+无需配置，直接运行：
+```bash
+python3 test_server.py
+```
+
+## 联系支持
+
+- **项目问题**: 提交Issue到GitHub仓库
+- **技术咨询**: xjzzxwork@gmail.com
+- **功能建议**: 通过邮箱或微信联系
+
+## 更新历史
+
+### 2025-08-16
+- ✅ 初始化Jekyll博客框架
+- ✅ 实现双侧边栏布局
+- ✅ 添加响应式设计
+- ✅ 配置中文语言
+- ✅ 创建使用文档
+- ✅ 添加快捷脚本
+- ✅ 发布示例文章
+
+## 原始需求文档
+
+### 🎯 目标
+- 托管：GitHub Pages（原生 Jekyll 构建）
+- 页面：主页、About、标签页、文章、播客
+- 风格：现代极简、艺术感、深浅色模式
+- 后台：Decap CMS - 增删改查、草稿发布、自定义permalink、SEO字段
+- Feed：RSS博客与播客订阅
+
+### ✅ 验收标准
+- GitHub Pages自动构建成功，主页/标签/详情可访问
+- /feed.xml与/podcast.xml可被抓取
+- /admin可创建/编辑内容；草稿不出现在站点，合并后即发布
+- 自定义permalink、canonical、jsonld生效
+- 标签页同时汇总文章与播客
 
 ---
-title: 第 1 期：主题
-tags: [podcast, interview]
-draft: false
-slug: ep-1
-permalink: /episodes/ep-1/
-audio_url: https://cdn.example.com/audio/ep1.mp3
-duration_sec: 1800
-canonical: https://example.com/episodes/ep-1
-og_image: https://.../ep1.jpg
-jsonld: |
-  { "@context":"https://schema.org","@type":"PodcastEpisode","name":"第 1 期","associatedMedia":{"@type":"MediaObject","contentUrl":"https://cdn.example.com/audio/ep1.mp3"}}
-published_at: 2025-08-12
-layout: episode
----
-Show notes（Markdown）
 
-
-⸻
-
-🧩 布局与 SEO
-
-在 default.html 的 <head> 引入 SEO 片段
-
-{% include head-seo.html %}
-
-_includes/head-seo.html
-
-{%- assign canon = page.canonical | default: site.url | append: site.baseurl | append: page.url -%}
-<link rel="canonical" href="{{ canon }}"/>
-{% if page.og_image %}<meta property="og:image" content="{{ page.og_image }}"/>{% endif %}
-{% if page.jsonld %}
-<script type="application/ld+json">
-{{ page.jsonld }}
-</script>
-{% endif %}
-
-_layouts/post.html（要点）
-
----
-layout: default
----
-<article class="post">
-  <h1>{{ page.title }}</h1>
-  <p class="meta">{{ page.published_at | date: "%Y-%m-%d" }}</p>
-  <div class="content">{{ content }}</div>
-  <p class="tags">
-    {% for t in page.tags %}<a href="{{ site.baseurl }}/tags/{{ t | uri_escape }}/">{{ t }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
-  </p>
-</article>
-
-_layouts/episode.html（音频）
-
----
-layout: default
----
-<article class="episode">
-  <h1>{{ page.title }}</h1>
-  <audio controls src="{{ page.audio_url }}"></audio>
-  <div class="content">{{ content }}</div>
-</article>
-
-
-⸻
-
-🏷️ 标签页（无插件实现）
-
-tags/index.html（索引所有标签：文章+播客）
-
----
-layout: default
-title: Tags
-permalink: /tags/
----
-<h1>Tags</h1>
-<ul>
-  {%- assign tag_map = "" | split: "" -%}
-  {%- for p in site.posts -%}
-    {%- unless p.draft -%}
-      {%- for t in p.tags -%}{% assign tag_map = tag_map | push: t %}{% endfor -%}
-    {%- endunless -%}
-  {%- endfor -%}
-  {%- for e in site.episodes -%}
-    {%- unless e.draft -%}
-      {%- for t in e.tags -%}{% assign tag_map = tag_map | push: t %}{% endfor -%}
-    {%- endunless -%}
-  {%- endfor -%}
-  {%- assign uniq = tag_map | uniq | sort_natural -%}
-  {%- for t in uniq -%}
-    <li><a href="{{ site.baseurl }}/tags/{{ t | uri_escape }}/">{{ t }}</a></li>
-  {%- endfor -%}
-</ul>
-
-为每个标签生成静态页：在仓库里预建一个极简生成脚本（可选），或手工常用标签页。最简做法：建 tags/tag.html 作为模板 + 用 “目录型 permalink”：
-
----
-layout: default
-title: Tag
-permalink: /tags/:tag/
----
-<h1># {{ page.tag }}</h1>
-
-<h2>Posts</h2>
-<ul>
-{% for p in site.posts %}
-  {% unless p.draft %}
-    {% if p.tags contains page.tag %}
-      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-    {% endif %}
-  {% endunless %}
-{% endfor %}
-</ul>
-
-<h2>Episodes</h2>
-<ul>
-{% for e in site.episodes %}
-  {% unless e.draft %}
-    {% if e.tags contains page.tag %}
-      <li><a href="{{ e.url | relative_url }}">{{ e.title }}</a></li>
-    {% endif %}
-  {% endunless %}
-{% endfor %}
-</ul>
-
-提示：若不想写生成脚本，可把常用标签各自复制一份 tags/<tag>/index.md，在 Frontmatter 里设 tag: <tag> 并用上面的模板布局。
-
-⸻
-
-📰 RSS 与播客 Feed
-	•	博客 RSS：jekyll-feed 插件自动生成 /feed.xml（你也可以放一个别名到 /rss.xml）
-	•	播客 RSS：自定义 podcast.xml
-
----
-layout: null
-permalink: /podcast.xml
----
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-  <title>{{ site.title | xml_escape }}</title>
-  <link>{{ site.url }}{{ site.baseurl }}</link>
-  <description>{{ site.description | xml_escape }}</description>
-  {% for e in site.episodes %}
-    {% unless e.draft %}
-    <item>
-      <title>{{ e.title | xml_escape }}</title>
-      <link>{{ site.url }}{{ site.baseurl }}{{ e.url }}</link>
-      <guid>{{ site.url }}{{ site.baseurl }}{{ e.url }}</guid>
-      {% if e.published_at %}<pubDate>{{ e.published_at | date_to_rfc822 }}</pubDate>{% endif %}
-      {% if e.excerpt %}<description><![CDATA[{{ e.excerpt }}]]></description>{% endif %}
-      <enclosure url="{{ e.audio_url }}" type="audio/mpeg" />
-    </item>
-    {% endunless %}
-  {% endfor %}
-</channel>
-</rss>
-
-
-⸻
-
-🎛 Decap CMS（/admin）
-
-public/admin/index.html
-
-<!doctype html>
-<html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
-<body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body></html>
-
-public/admin/config.yml（用你的仓库替换）
-
-backend:
-  name: github
-  repo: <OWNER>/<REPO>
-  branch: main
-  # 若需 OAuth 登录，部署 decap-cms-oauth-provider（免费层即可）
-  base_url: https://<OAUTH-PROVIDER>
-  auth_endpoint: /auth
-
-publish_mode: editorial_workflow
-media_folder: "assets/uploads"
-public_folder: "{{site.baseurl}}/assets/uploads"
-
-collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Draft, name: draft, widget: boolean, default: true}
-      - {label: Tags, name: tags, widget: list, default: []}
-      - {label: Published At, name: published_at, widget: datetime, required: false}
-      - {label: Permalink, name: permalink, widget: string, required: false, hint: "/posts/<slug>/"}
-      - {label: Canonical, name: canonical, widget: string, required: false}
-      - {label: OG Image, name: og_image, widget: string, required: false}
-      - {label: JSON-LD, name: jsonld, widget: text, required: false}
-      - {label: Body, name: body, widget: markdown}
-
-  - name: "episodes"
-    label: "Episodes"
-    folder: "_episodes"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Draft, name: draft, widget: boolean, default: true}
-      - {label: Tags, name: tags, widget: list, default: []}
-      - {label: Published At, name: published_at, widget: datetime, required: false}
-      - {label: Permalink, name: permalink, widget: string, hint: "/episodes/<slug>/"}
-      - {label: Audio URL, name: audio_url, widget: string}
-      - {label: Duration (sec), name: duration_sec, widget: number, required: false}
-      - {label: Canonical, name: canonical, widget: string, required: false}
-      - {label: OG Image, name: og_image, widget: string, required: false}
-      - {label: JSON-LD, name: jsonld, widget: text, required: false}
-      - {label: Body, name: body, widget: markdown}
-
-
-⸻
-
-🎨 样式与深浅色
-	•	直接写 CSS（或用预编译好的 Tailwind 输出的单 CSS 文件），在 default.html 引入。
-	•	采用大留白、圆角、柔和阴影、可变字体；用 @media (prefers-color-scheme: dark) 适配暗色。
-
-⸻
-
-✅ 验收
-	•	GitHub Pages 自动构建成功，主页/标签/详情可访问
-	•	/feed.xml 与 /podcast.xml 可被抓取
-	•	/admin 可创建/编辑内容；草稿不出现在站点，合并后即发布
-	•	自定义 permalink、canonical、jsonld 生效
-	•	标签页同时汇总文章与播客
-
-⸻
+**最后更新**: 2025-08-16
+**下次对话重点**: 根据用户需求决定（内容发布/功能优化/问题修复）
