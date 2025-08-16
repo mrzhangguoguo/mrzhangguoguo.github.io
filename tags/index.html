@@ -26,13 +26,30 @@ permalink: /tags/
     {% endunless %}
   {% endfor %}
   
-  {% assign unique_tags = all_tags | uniq | sort_natural %}
+  {% assign unique_tags = all_tags | uniq | sort %}
   
   {% if unique_tags.size > 0 %}
     <div class="tags-cloud">
       {% for tag in unique_tags %}
-        {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag and post.draft != true" %}
-        {% assign tag_episodes = site.episodes | where_exp: "episode", "episode.tags contains tag and episode.draft != true" %}
+        {% assign tag_posts = "" | split: "" %}
+        {% assign tag_episodes = "" | split: "" %}
+        
+        {% for post in site.posts %}
+          {% unless post.draft %}
+            {% if post.tags contains tag %}
+              {% assign tag_posts = tag_posts | push: post %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        
+        {% for episode in site.episodes %}
+          {% unless episode.draft %}
+            {% if episode.tags contains tag %}
+              {% assign tag_episodes = tag_episodes | push: episode %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        
         {% assign tag_count = tag_posts.size | plus: tag_episodes.size %}
         
         <a href="{{ site.baseurl }}/tags/{{ tag | uri_escape }}/" class="tag-link" data-count="{{ tag_count }}">
@@ -44,8 +61,25 @@ permalink: /tags/
     <div class="tags-list">
       <h2>Browse by Tag</h2>
       {% for tag in unique_tags %}
-        {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag and post.draft != true" %}
-        {% assign tag_episodes = site.episodes | where_exp: "episode", "episode.tags contains tag and episode.draft != true" %}
+        {% assign tag_posts = "" | split: "" %}
+        {% assign tag_episodes = "" | split: "" %}
+        
+        {% for post in site.posts %}
+          {% unless post.draft %}
+            {% if post.tags contains tag %}
+              {% assign tag_posts = tag_posts | push: post %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        
+        {% for episode in site.episodes %}
+          {% unless episode.draft %}
+            {% if episode.tags contains tag %}
+              {% assign tag_episodes = tag_episodes | push: episode %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+        
         {% assign tag_count = tag_posts.size | plus: tag_episodes.size %}
         
         <div class="tag-section">
