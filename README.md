@@ -2,7 +2,7 @@
 
 基于Jekyll的现代化博客和播客平台，专注于分享AI出海干货和AI圈最新消息。
 
-🌐 **在线访问**: https://mrzhangguoguo.github.io/my-blog-podcast/
+🌐 **在线访问**: https://mrzhangguoguo.github.io/
 
 ## ✨ 功能特性
 
@@ -130,7 +130,7 @@ python3 test_server.py
 
 - **邮箱**: xjzzxwork@gmail.com
 - **GitHub**: [mrzhangguoguo](https://github.com/mrzhangguoguo)
-- **博客**: [果叔AI世界](https://mrzhangguoguo.github.io/my-blog-podcast/)
+- **博客**: [果叔AI世界](https://mrzhangguoguo.github.io/)
 
 ## 📄 许可证
 

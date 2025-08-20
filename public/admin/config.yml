@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: mrzhangguoguo/my-blog-podcast
+  repo: mrzhangguoguo/mrzhangguoguo.github.io
   branch: main
   # For GitHub Pages without OAuth, use test-repo backend for testing
   # backend:
@@ -8,7 +8,7 @@ backend:
 
 publish_mode: editorial_workflow
 media_folder: "assets/uploads"
-public_folder: "/my-blog-podcast/assets/uploads"
+public_folder: "/assets/uploads"
 
 collections:
   - name: "posts"

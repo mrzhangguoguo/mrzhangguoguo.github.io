@@ -163,7 +163,7 @@ git commit -m "发布新文章：文章标题"
 git push origin main
 ```
 
-等待几分钟后访问：https://mrzhangguoguo.github.io/my-blog-podcast/
+等待几分钟后访问：https://mrzhangguoguo.github.io/
 
 ## 五、Markdown语法参考
 

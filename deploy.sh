@@ -34,7 +34,7 @@ if [ $? -eq 0 ]; then
     echo "✅ 部署成功！"
     echo ""
     echo "⏱️  等待几分钟让GitHub Pages构建..."
-    echo "🌐 访问: https://mrzhangguoguo.github.io/my-blog-podcast/"
+echo "🌐 访问: https://mrzhangguoguo.github.io/"
 else
     echo "❌ 部署失败，请检查网络连接"
 fi
