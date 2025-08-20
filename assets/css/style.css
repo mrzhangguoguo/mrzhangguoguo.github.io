@@ -539,6 +539,9 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 2rem 0;
+  /* Prevent long words/URLs from expanding the grid column */
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Ensure media never overflow the content column */
@@ -584,6 +587,10 @@ a:hover {
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9em;
+  /* Allow inline code to wrap rather than forcing overflow */
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .post-content pre, .episode-content pre {
@@ -597,6 +604,28 @@ a:hover {
 .post-content pre code, .episode-content pre code {
   background: none;
   padding: 0;
+  /* Preserve code block formatting while allowing horizontal scroll */
+  white-space: pre;
+}
+
+/* Prevent long links/headings from stretching columns */
+.post-content a, .episode-content a,
+.post-content h1, .post-content h2, .post-content h3, .post-content h4,
+.episode-content h1, .episode-content h2, .episode-content h3, .episode-content h4 {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Ensure table cell text wraps and does not expand the layout */
+.post-content table td, .post-content table th,
+.episode-content table td, .episode-content table th {
+  word-break: break-word;
+}
+
+/* Sidebar content should wrap too to avoid pushing into main */
+.post-sidebar, .home-sidebar, .toc {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Audio Player */
