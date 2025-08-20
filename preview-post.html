@@ -25,25 +25,7 @@
     <!-- Table of Contents -->
     <nav class="toc" id="toc">
       <h3 class="toc-title">目录</h3>
-      <div class="toc-content">
-        <ul class="toc-list">
-          <li class="toc-item toc-h2">
-            <a href="#section1" class="toc-link active">介绍</a>
-          </li>
-          <li class="toc-item toc-h2">
-            <a href="#section2" class="toc-link">主要功能</a>
-          </li>
-          <li class="toc-item toc-h3">
-            <a href="#section2-1" class="toc-link">功能一</a>
-          </li>
-          <li class="toc-item toc-h3">
-            <a href="#section2-2" class="toc-link">功能二</a>
-          </li>
-          <li class="toc-item toc-h2">
-            <a href="#section3" class="toc-link">总结</a>
-          </li>
-        </ul>
-      </div>
+      <div class="toc-content" id="toc-content"><!-- 动态生成 --></div>
     </nav>
     
     <!-- Main Article -->
@@ -163,14 +145,64 @@ const chatbot = new AICustomerService({
     if (icon) {
       icon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
     }
-    
-    // Simulate TOC highlighting
-    document.querySelectorAll('.toc-link').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+
+    // 动态生成仅包含 H2 的目录（与 _includes/toc.html 逻辑一致）
+    function generateTOC() {
+      const article = document.querySelector('.post-content, .episode-content');
+      if (!article) return;
+      const headings = article.querySelectorAll('h2');
+      const tocContent = document.getElementById('toc-content');
+      if (!tocContent) return;
+      if (headings.length === 0) {
+        document.getElementById('toc').style.display = 'none';
+        return;
+      }
+      const tocList = document.createElement('ul');
+      tocList.className = 'toc-list';
+      headings.forEach((heading, index) => {
+        if (!heading.id) heading.id = 'heading-' + index;
+        const li = document.createElement('li');
+        li.className = 'toc-item toc-h2';
+        const a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent;
+        a.className = 'toc-link';
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.getElementById(heading.id);
+          if (target) {
+            const offset = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+        });
+        li.appendChild(a);
+        tocList.appendChild(li);
       });
+      tocContent.innerHTML = '';
+      tocContent.appendChild(tocList);
+    }
+
+    function highlightCurrentSection() {
+      const headings = document.querySelectorAll('.post-content h2, .episode-content h2');
+      const tocLinks = document.querySelectorAll('.toc-link');
+      window.addEventListener('scroll', function() {
+        let current = '';
+        const offset = 100;
+        headings.forEach(heading => {
+          const rect = heading.getBoundingClientRect();
+          if (rect.top <= offset) current = heading.id;
+        });
+        tocLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      generateTOC();
+      highlightCurrentSection();
     });
   </script>
 </body>

@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const article = document.querySelector('.post-content, .episode-content');
     if (!article) return;
     
-    const headings = article.querySelectorAll('h2, h3, h4');
+    // 仅抓取 H2 作为目录项
+    const headings = article.querySelectorAll('h2');
     const tocContent = document.getElementById('toc-content');
     
     if (headings.length === 0) {
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       const li = document.createElement('li');
-      li.className = 'toc-item toc-' + heading.tagName.toLowerCase();
+      li.className = 'toc-item toc-h2';
       
       const a = document.createElement('a');
       a.href = '#' + heading.id;
@@ -60,7 +61,8 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 高亮当前章节
   function highlightCurrentSection() {
-    const headings = document.querySelectorAll('.post-content h2, .post-content h3, .post-content h4, .episode-content h2, .episode-content h3, .episode-content h4');
+    // 仅高亮 H2 标题
+    const headings = document.querySelectorAll('.post-content h2, .episode-content h2');
     const tocLinks = document.querySelectorAll('.toc-link');
     
     window.addEventListener('scroll', function() {
