@@ -1,80 +1,87 @@
 ---
-title: "Welcome to Your New Blog & Podcast"
-tags: [blog, welcome, jekyll]
+layout: post
+title: "欢迎来到果叔AI世界：你的AI出海干货分享基地"
+date: 2025-08-16 10:30:00 +0800
+tags: [AI, 欢迎, 博客, 播客]
+excerpt: "欢迎来到果叔AI世界！专注分享AI出海干货和圈内最新消息，探索AI技术趋势和商业机会。"
 draft: false
-permalink: /posts/welcome-to-your-new-blog/
-published_at: 2025-08-16
-excerpt: "Welcome to your new Jekyll-powered blog and podcast platform! This post introduces the features and capabilities of your new site."
 ---
 
-# Welcome to Your New Blog & Podcast Platform!
+# 欢迎来到果叔AI世界！🤖
 
-Congratulations! You now have a beautiful, modern blog and podcast platform powered by Jekyll and hosted on GitHub Pages. This platform combines the best of both worlds - written content and audio episodes - all in one cohesive experience.
+你好！欢迎来到果叔AI世界，这里是专门为AI爱好者和出海创业者打造的知识分享平台。无论你是AI技术的新手，还是正在寻求出海机会的创业者，这里都有你需要的干货内容。
 
-## What You've Got
+## 我们提供什么
 
-### 🏗️ **Modern Architecture**
-- **Jekyll-powered**: Fast, secure static site generation
-- **GitHub Pages hosting**: Free, reliable, and automatic deployments
-- **Decap CMS**: Easy content management with a beautiful interface
-- **SEO optimized**: Built-in meta tags, Open Graph, and structured data
+### 🚀 **AI出海干货**
+- **最新AI工具**：第一时间分享实用的AI工具和技术
+- **出海经验**：真实的海外市场开拓经验和案例
+- **商业机会**：发掘AI领域的商业机会和趋势
+- **技术分析**：深度解析AI技术的商业应用
 
-### 🎨 **Beautiful Design**
-- **Minimal aesthetic**: Clean, focused design that puts content first
-- **Dark/Light mode**: Automatic theme switching based on user preference
-- **Responsive**: Perfect on desktop, tablet, and mobile
-- **Accessible**: Built with web accessibility standards in mind
+### 🎯 **精选内容形式**
+- **深度文章**：详细的技术分析和商业洞察
+- **播客节目**：与行业专家的深度对话
+- **工具推荐**：精选实用的AI工具和资源
+- **案例分析**：成功出海的AI项目案例研究
 
-### 📝 **Content Features**
-- **Dual content types**: Blog posts and podcast episodes
-- **Tagging system**: Organize and discover content easily
-- **RSS feeds**: Separate feeds for blog and podcast content
-- **Custom permalinks**: SEO-friendly URLs you can customize
+### 📱 **现代化平台**
+- **响应式设计**：完美适配手机、平板和电脑
+- **深色模式**：护眼的深色主题，随系统自动切换
+- **快速加载**：基于Jekyll的静态网站，访问速度极快
+- **SEO优化**：内容容易被搜索引擎发现
 
-### ⚡ **Developer Friendly**
-- **Version controlled**: All content stored in Git
-- **Editorial workflow**: Draft → Review → Publish via pull requests
-- **Custom fields**: Canonical URLs, custom JSON-LD, and more
-- **Media management**: Upload and organize images and audio files
+### 🔗 **便捷订阅**
+- **RSS订阅**：可订阅博客和播客内容
+- **标签分类**：按主题快速找到感兴趣的内容
+- **社交分享**：轻松分享有价值的内容
+- **微信互动**：扫码添加微信，获取更多独家内容
 
-## Getting Started
+## 如何开始探索
 
-### 1. Content Management
-Visit `/public/admin/` to access your content management system. From there you can:
-- Create new blog posts
-- Add podcast episodes
-- Edit site settings
-- Manage media files
+### 🎯 **推荐内容**
+作为新访客，建议你从这些内容开始：
+- 浏览[标签页面](/tags/)，找到你感兴趣的主题
+- 查看最新的AI工具推荐和使用教程
+- 收听播客节目，了解行业最新动态
+- 关注我们的微信，获取独家内容更新
 
-### 2. Customization
-Edit the following files to make this site your own:
-- `_config.yml` - Site title, description, and settings
-- `public/admin/config.yml` - CMS configuration and repository settings
-- `assets/css/style.css` - Visual styling and themes
+### 📧 **联系方式**
+- **邮箱**：xjzzxwork@gmail.com
+- **微信**：扫描侧边栏二维码添加
+- **GitHub**：[项目地址](https://github.com/mrzhangguoguo/my-blog-podcast)
 
-### 3. Publishing Workflow
-1. Create content as drafts in the CMS
-2. When ready, change draft status to false
-3. Content automatically appears on your site
-4. Use the editorial workflow for collaborative editing
+### 🔗 **推荐工具**
+- [Claude Code 国内直连](https://code.yoretea.com) - AI编程助手
+- 更多实用工具请查看我们的工具推荐文章
 
-## Next Steps
+## 内容更新计划
 
-1. **Update site information** in `_config.yml`
-2. **Configure your repository** in the CMS config
-3. **Create your first real post** or episode
-4. **Customize the design** to match your brand
-5. **Set up analytics** and other third-party integrations
+我们致力于定期分享高质量内容：
 
-## Need Help?
+### 📝 **博客文章**
+- 每周2-3篇深度技术文章
+- AI工具评测和使用指南
+- 出海创业经验分享
+- 行业趋势分析
 
-This platform is built with standard web technologies:
-- [Jekyll Documentation](https://jekyllrb.com/docs/)
-- [GitHub Pages Guide](https://docs.github.com/en/pages)
-- [Decap CMS Docs](https://decapcms.org/docs/)
+### 🎙️ **播客节目**
+- 每周1期专题讨论
+- 行业专家访谈
+- 热点事件解读
+- 听众问答互动
+
+## 加入我们的社区
+
+果叔AI世界不只是一个内容平台，更是一个AI爱好者的交流社区。我们鼓励：
+
+- **分享经验**：你的AI使用心得和创业故事
+- **提出问题**：遇到的技术难题和商业疑惑
+- **推荐工具**：发现的好用AI工具和资源
+- **交流合作**：寻找志同道合的合作伙伴
 
 ---
 
-**Happy blogging and podcasting!** 🎉
+**让我们一起在AI的海洋中乘风破浪！** 🌊🚀
 
-*You can edit or delete this post by visiting the admin panel or editing the file directly in your repository.*
+*如果你有任何建议或想法，欢迎通过邮箱或微信联系我们。你的反馈对我们非常重要！*
