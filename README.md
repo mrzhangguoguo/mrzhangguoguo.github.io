@@ -11,6 +11,8 @@
 - 🎙️ **播客平台** - 音频内容管理和RSS订阅
 - 🏷️ **标签系统** - 文章分类和标签云
 - 🔍 **SEO优化** - 元标签、结构化数据、站点地图
+ - 💡 **语法高亮** - Rouge 高亮，清晰的代码块配色
+ - 📈 **Mermaid 图表** - Markdown 中的 mermaid 代码块自动渲染
 
 ### 界面设计
 - 🎨 **响应式布局** - 完美适配桌面、平板、手机
@@ -23,6 +25,7 @@
 - 🚀 **快速部署** - Git推送自动构建
 - 🔧 **易于维护** - 简单的Markdown文件管理
 - 🌍 **中文优化** - 完全中文界面和日期格式
+ - 🧭 **根域部署** - 使用用户站点仓库 `mrzhangguoguo.github.io`
 
 ## 🚀 快速开始
 
@@ -40,6 +43,12 @@ python3 test_server.py
 ### 3. 发布到线上
 ```bash
 ./deploy.sh "更新说明"
+```
+或直接：
+```bash
+git add .
+git commit -m "更新说明"
+git push origin main
 ```
 
 ## 📁 项目结构
@@ -67,6 +76,9 @@ title: "文章标题"
 date: 2025-08-16 10:30:00 +0800
 tags: [AI, 教程, 技术]
 excerpt: "文章摘要..."
+permalink: /posts/your-english-slug/   # 推荐：自定义英文URL，避免中文编码
+redirect_from:                         # 可选：为历史URL保留跳转
+  - "/posts/你的历史中文URL/"
 sidebar_ad: /assets/images/ad.png  # 可选
 ---
 
@@ -85,6 +97,7 @@ sidebar_ad: /assets/images/ad.png  # 可选
 ```bash
 python3 test_server.py
 ```
+说明：该预览不渲染 Jekyll 模板，仅用于快速查看样式（例如代码高亮、表格、Mermaid 效果）。
 
 ### 方案2: Docker运行（完整功能）
 ```bash
@@ -96,6 +109,52 @@ python3 test_server.py
 ```bash
 # 使用rbenv安装隔离环境
 ./setup-rbenv.sh
+```
+
+## 🌐 部署与域名
+
+- 用户站点仓库：当前仓库已更名为 `mrzhangguoguo.github.io`，主页即根域。
+- 站点配置：
+  - `_config.yml`: `url: https://mrzhangguoguo.github.io`，`baseurl: ""`
+  - `public/admin/config.yml`: `public_folder: "/assets/uploads"`，`backend.repo: mrzhangguoguo/mrzhangguoguo.github.io`
+- 链接引用：页面/模板中优先使用 `| relative_url`，避免硬编码子路径。
+
+## 🔗 URL 策略（重要）
+
+- 文章与播客的 URL 通过 `permalink` 人工自定义（英文），与中文标题解耦。
+- 已开启 `jekyll-redirect-from` 插件，可用 `redirect_from` 为旧链接提供 301 跳转。
+- 全站文章默认路径：`/posts/:slug/`；播客：`/episodes/:slug/`。
+
+## 🧩 富文本与可读性增强
+
+- 代码高亮：使用 Rouge，高对比度配色；行内与块级代码均已优化。
+- Mermaid：在 Markdown 使用围栏代码块标记 `mermaid`，前端自动渲染为图表。
+- 表格：提供边框、表头底色、斑马纹与横向滚动，避免溢出。
+- 长内容防溢出：对长链接、英文单词、内联 code 开启换行保护；图片/视频/iframe 限制 `max-width:100%`。
+
+## 🧭 布局说明
+
+- 文章页三栏布局采用 2:6:2（带最小宽度约束），中间主列严格占 60%。
+- 目录仅抓取 H2 级标题，避免目录过长影响阅读。
+
+## 📊 GA4 集成（可选）
+
+1) 在 `_config.yml` 添加：`ga_measurement_id: G-XXXXXXXXXX`
+2) 新建 `_includes/ga.html`（示例见下）：
+```html
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_measurement_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+  gtag('config', '{{ site.ga_measurement_id }}', { anonymize_ip: true });
+  // 自定义事件：gtag('event','name',{param:'value'})
+</script>
+```
+3) 在 `_layouts/default.html` 的 `<head>` 中引入：
+```liquid
+{% raw %}{% if jekyll.environment == "production" and site.ga_measurement_id %}
+  {% include ga.html %}
+{% endif %}{% endraw %}
 ```
 
 ## 🎯 核心功能实现
@@ -111,6 +170,9 @@ python3 test_server.py
 - [x] 标签系统
 - [x] RSS订阅
 - [x] Decap CMS配置
+ - [x] URL 英文化与跳转（permalink + redirect_from）
+ - [x] 代码高亮与 Mermaid 图表
+ - [x] 三栏 2:6:2 布局与阅读体验优化
 
 ### 待优化功能 🔧
 - [ ] 搜索功能
