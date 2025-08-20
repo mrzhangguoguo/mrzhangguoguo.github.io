@@ -4,6 +4,9 @@ title: "Claude Code全栈实战指南：打造现代博客系统完整教程"
 date: 2025-08-16 14:00:00 +0800
 tags: [Claude Code实战, 全栈开发, 博客系统, 项目教程, AI编程实践]
 excerpt: "通过构建完整的现代化博客系统，深度体验Claude Code的全栈开发能力。从需求分析到生产部署，掌握AI驱动开发的完整流程，亲身感受14-21倍的开发效率提升。"
+permalink: /posts/claude-code-fullstack-blog-tutorial/
+redirect_from:
+  - "/posts/Claude Code全栈实战指南：打造现代博客系统完整教程/"
 ---
 
 ## 开篇：AI编程的真实力量

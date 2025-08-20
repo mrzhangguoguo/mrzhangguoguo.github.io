@@ -5,6 +5,7 @@ date: 2025-08-16 23:30:00 +0800
 tags: [教程, 博客, 入门]
 excerpt: "详细介绍如何在果叔AI世界发布文章、管理图片和优化SEO。"
 sidebar_ad: /assets/images/default-ad.png
+permalink: /posts/how-to-use-blog/
 ---
 
 ## 欢迎使用果叔AI世界博客

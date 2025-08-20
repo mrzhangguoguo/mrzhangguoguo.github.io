@@ -5,6 +5,7 @@ date: 2025-08-16 10:30:00 +0800
 tags: [AI, 欢迎, 博客, 播客]
 excerpt: "欢迎来到果叔AI世界！专注分享AI出海干货和圈内最新消息，探索AI技术趋势和商业机会。"
 draft: false
+permalink: /posts/welcome-to-your-new-blog/
 ---
 
 # 欢迎来到果叔AI世界！🤖

@@ -4,6 +4,9 @@ title: "Claude Code首次使用指南：十分钟创建完整项目"
 date: 2025-08-16 11:00:00 +0800
 tags: [Claude Code教程, 项目创建, AI编程实战, 全栈开发, 新手指南]
 excerpt: "从零开始，使用Claude Code在10分钟内创建一个完整的任务管理应用。包含前端界面、后端API、数据库集成、测试用例和部署配置的完整开发流程，体验AI编程的革命性效率。"
+permalink: /posts/claude-code-first-steps-10min-full-project/
+redirect_from:
+  - "/posts/Claude Code首次使用指南：十分钟创建完整项目/"
 ---
 
 ## 写在前面：AI编程的第一次真实体验
