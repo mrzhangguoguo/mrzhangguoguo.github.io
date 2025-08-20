@@ -155,7 +155,8 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  max-width: 1200px;
+  /* Widen home container to reduce crowding */
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -538,6 +539,25 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.8;
   margin: 2rem 0;
+}
+
+/* Ensure media never overflow the content column */
+.post-content img,
+.episode-content img,
+.post-content video,
+.episode-content video,
+.post-content iframe,
+.episode-content iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make wide tables scrollable instead of overflowing */
+.post-content table,
+.episode-content table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .post-content h2, .post-content h3, .post-content h4,
