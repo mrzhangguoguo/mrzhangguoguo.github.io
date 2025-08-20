@@ -207,12 +207,10 @@ a:hover {
 }
 
 .main-article {
-  /* Ensure the main article has comfortable reading width and sits above sticky sidebar */
+  /* Ensure the main article has comfortable reading width */
   min-width: 0;
   max-width: 960px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* ========================================
@@ -225,6 +223,8 @@ a:hover {
   height: fit-content;
   max-height: calc(100vh - var(--nav-height) - 40px);
   overflow-y: auto;
+  /* Make sure sticky sidebars are above article when overlapping */
+  z-index: 2;
 }
 
 .sidebar-widget {
