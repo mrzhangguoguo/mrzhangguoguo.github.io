@@ -609,6 +609,23 @@ a:hover {
   white-space: pre;
 }
 
+/* Rouge highlight wrapper */
+.highlight {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+/* Mermaid container tweaks */
+.mermaid {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
 /* Prevent long links/headings from stretching columns */
 .post-content a, .episode-content a,
 .post-content h1, .post-content h2, .post-content h3, .post-content h4,

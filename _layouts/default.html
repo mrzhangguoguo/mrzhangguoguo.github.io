@@ -23,6 +23,8 @@
     <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. Built with Jekyll and hosted on GitHub Pages.</p>
   </footer>
 
+  <!-- Mermaid.js for rendering ```mermaid code blocks -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script>
     function toggleTheme() {
       const html = document.documentElement;
@@ -42,6 +44,27 @@
     if (icon) {
       icon.textContent = savedTheme === 'light' ? '🌙' : '☀️';
     }
+
+    // Mermaid: convert fenced ```mermaid blocks to <div class="mermaid"> and render
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const mermaidBlocks = document.querySelectorAll('pre > code.language-mermaid, pre > code.lang-mermaid');
+        mermaidBlocks.forEach(codeEl => {
+          const pre = codeEl.parentElement;
+          const graph = codeEl.textContent;
+          const container = document.createElement('div');
+          container.className = 'mermaid';
+          container.textContent = graph;
+          pre.replaceWith(container);
+        });
+
+        if (window.mermaid) {
+          window.mermaid.initialize({ startOnLoad: true, securityLevel: 'loose', theme: savedTheme === 'dark' ? 'dark' : 'default' });
+        }
+      } catch (e) {
+        console.warn('Mermaid init failed:', e);
+      }
+    });
   </script>
 </body>
 </html>
