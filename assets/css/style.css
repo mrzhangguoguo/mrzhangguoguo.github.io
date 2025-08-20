@@ -198,8 +198,8 @@ a:hover {
 /* Article Page with Dual Sidebars */
 .content-with-dual-sidebar {
   display: grid;
-  /* Slightly widen TOC, shrink right sidebar, and expand container */
-  grid-template-columns: 220px 1fr 280px;
+  /* Use 2:6:2 percentage layout with sensible minimums */
+  grid-template-columns: minmax(200px, 20%) minmax(0, 60%) minmax(260px, 20%);
   gap: 2rem;
   max-width: 1440px;
   margin: 0 auto;
@@ -223,8 +223,7 @@ a:hover {
   height: fit-content;
   max-height: calc(100vh - var(--nav-height) - 40px);
   overflow-y: auto;
-  /* Make sure sticky sidebars are above article when overlapping */
-  z-index: 2;
+  /* No z-index to avoid covering the main article */
 }
 
 .sidebar-widget {
