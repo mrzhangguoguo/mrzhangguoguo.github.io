@@ -5,10 +5,12 @@ title: Home
 
 <div class="home-wrapper">
   <!-- Hero Section - Full Width -->
-  <section class="hero">
+<section class="hero {% if site.hero_image %}has-banner{% endif %}" {% if site.hero_image %}style="background-image: url('{{ site.hero_image | relative_url }}');"{% endif %}>
+  <div class="hero-inner">
     <h1>{{ site.title }}</h1>
     <p class="hero-description">{{ site.description }}</p>
-  </section>
+  </div>
+</section>
   
   <!-- Content with Sidebar -->
   <div class="content-with-sidebar">

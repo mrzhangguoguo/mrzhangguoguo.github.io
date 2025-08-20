@@ -195,6 +195,40 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Hero with banner background */
+.hero.has-banner {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: var(--radius-lg);
+  min-height: 320px;
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.hero.has-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+}
+
+.hero.has-banner .hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero.has-banner h1,
+.hero.has-banner .hero-description {
+  color: #fff;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+@media (min-width: 1200px) {
+  .hero.has-banner { min-height: 400px; }
+}
+
 /* Content with Sidebar Layout */
 .content-with-sidebar {
   display: grid;
@@ -277,7 +311,7 @@ a:hover {
 }
 
 .qr-code img {
-  max-width: 150px;
+  max-width: 220px;
   height: auto;
   margin-bottom: 0.5rem;
 }
@@ -778,6 +812,11 @@ a:hover {
   .post-sidebar,
   .toc {
     display: none;
+  }
+
+  /* QR size on mobile when sidebar is visible in future */
+  .qr-code img {
+    max-width: 150px;
   }
   
   /* Mobile sidebar toggle (future feature) */
