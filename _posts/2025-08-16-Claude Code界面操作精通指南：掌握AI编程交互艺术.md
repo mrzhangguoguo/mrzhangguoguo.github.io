@@ -7,6 +7,7 @@ excerpt: "深度解析Claude Code的界面设计哲学和操作精髓，从基�
 permalink: /posts/claude-code-ui-operations-mastery/
 redirect_from:
   - "/posts/Claude Code界面操作精通指南：掌握AI编程交互艺术/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 开篇：重新定义人机协作的边界

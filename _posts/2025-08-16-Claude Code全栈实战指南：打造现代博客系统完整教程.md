@@ -7,6 +7,7 @@ excerpt: "通过构建完整的现代化博客系统，深度体验Claude Code�
 permalink: /posts/claude-code-fullstack-blog-tutorial/
 redirect_from:
   - "/posts/Claude Code全栈实战指南：打造现代博客系统完整教程/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 开篇：AI编程的真实力量

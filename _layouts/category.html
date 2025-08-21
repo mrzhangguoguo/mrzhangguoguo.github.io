@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% assign cat_name = page.category_name | default: page.category %}
+{% assign cat_slug = page.category_slug %}
+
+<section class="category-header">
+  <h1 class="post-title">{{ cat_name }}</h1>
+  {% if site.data.categories and cat_slug %}
+    {% assign meta = site.data.categories[cat_slug] %}
+    {% if meta and meta.description %}
+      <p class="post-excerpt">{{ meta.description }}</p>
+    {% endif %}
+  {% endif %}
+</section>
+
+<div class="content-with-sidebar">
+  <div class="home-content">
+    <section class="recent-posts">
+      <h2>分类文章</h2>
+      {% assign filtered = site.posts | where_exp: "p", "p.categories contains cat_name" %}
+      {% if filtered.size > 0 %}
+        <div class="post-list">
+          {% for post in filtered %}
+            <article class="post-card">
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <div class="post-meta">
+                <time datetime="{{ post.published_at | default: post.date | date_to_xmlschema }}">
+                  {{ post.published_at | default: post.date | date: "%Y年%-m月%-d日" }}
+                </time>
+                {% if post.tags and post.tags.size > 0 %}
+                  <div class="tags">
+                    {% for tag in post.tags limit: 4 %}
+                      <span class="tag">#{{ tag }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+              {% if post.excerpt %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>暂无文章。</p>
+      {% endif %}
+    </section>
+  </div>
+  {% include home-sidebar.html %}
+  
+</div>

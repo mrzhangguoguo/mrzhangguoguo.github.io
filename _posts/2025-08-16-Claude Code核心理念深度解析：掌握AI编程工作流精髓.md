@@ -7,6 +7,7 @@ excerpt: "深入剖析Claude Code的核心理念和AI编程工作流，从提示
 permalink: /posts/claude-code-core-concepts-workflow/
 redirect_from:
   - "/posts/Claude Code核心理念深度解析：掌握AI编程工作流精髓/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 开篇：编程范式的革命性转变

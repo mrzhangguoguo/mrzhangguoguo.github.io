@@ -7,6 +7,7 @@ excerpt: "深度解析Claude Code：Anthropic推出的革命性AI编程助手，
 permalink: /posts/claude-code-beginner-guide-ai-coding-assistant/
 redirect_from:
   - "/posts/Claude Code完全入门指南：AI编程助手如何颠覆传统开发模式/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 前言：当编程遇上AI的那一刻

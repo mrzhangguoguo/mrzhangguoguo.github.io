@@ -7,6 +7,7 @@ excerpt: "史上最全Claude Code安装配置教程，涵盖Windows、Mac、Linu
 permalink: /posts/claude-code-installation-setup-guide/
 redirect_from:
   - "/posts/Claude Code安装配置详解：零门槛搭建AI编程环境/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 写在前面：AI编程环境的重要性

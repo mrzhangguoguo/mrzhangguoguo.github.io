@@ -7,6 +7,7 @@ excerpt: "从零开始，使用Claude Code在10分钟内创建一个完整的任
 permalink: /posts/claude-code-first-steps-10min-full-project/
 redirect_from:
   - "/posts/Claude Code首次使用指南：十分钟创建完整项目/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 写在前面：AI编程的第一次真实体验

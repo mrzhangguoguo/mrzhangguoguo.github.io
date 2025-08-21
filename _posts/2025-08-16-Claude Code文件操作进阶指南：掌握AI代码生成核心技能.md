@@ -7,6 +7,7 @@ excerpt: "深入掌握Claude Code的文件操作和智能代码生成技术，�
 permalink: /posts/claude-code-file-operations-advanced/
 redirect_from:
   - "/posts/Claude Code文件操作进阶指南：掌握AI代码生成核心技能/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 开篇：代码生成的哲学思辨

@@ -1,0 +1,5 @@
+claude-code:
+  name: "Claude Code 教学大全"
+  slug: "claude-code"
+  description: "系统化的 Claude Code 入门到进阶教程与实战指南。"
+  cover: "/assets/images/categories/claude-code.jpg"

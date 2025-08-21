@@ -1,0 +1,26 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<section class="recent-posts">
+  <h2>全部分类</h2>
+  <div class="post-list">
+    {% assign cats = site.data.categories %}
+    {% for key in cats %}
+      {% assign meta = cats[key[0]] %}
+      {% assign count = 0 %}
+      {% for p in site.posts %}
+        {% if p.categories contains meta.name %}
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      <article class="post-card">
+        <h3><a href="{{ '/categories/' | append: meta.slug | append: '/' | relative_url }}">{{ meta.name }}</a></h3>
+        {% if meta.description %}<p class="post-excerpt">{{ meta.description }}</p>{% endif %}
+        <p class="post-meta">共 {{ count }} 篇</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
