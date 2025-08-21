@@ -8,8 +8,9 @@ permalink: /categories/
   <h2>全部分类</h2>
   <div class="post-list">
     {% assign cats = site.data.categories %}
-    {% for key in cats %}
-      {% assign meta = cats[key[0]] %}
+    {% if cats %}
+    {% for pair in cats %}
+      {% assign meta = pair[1] %}
       {% assign count = 0 %}
       {% for p in site.posts %}
         {% if p.categories contains meta.name %}
@@ -22,5 +23,8 @@ permalink: /categories/
         <p class="post-meta">共 {{ count }} 篇</p>
       </article>
     {% endfor %}
+    {% else %}
+      <p>暂无分类。</p>
+    {% endif %}
   </div>
 </section>
