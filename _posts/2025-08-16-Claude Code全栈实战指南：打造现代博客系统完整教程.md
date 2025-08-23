@@ -2212,8 +2212,4 @@ export const getCurrentUser = async (req: Request, res: Response, next: NextFunc
 }
 ```
 
-我已经完成了第6篇文章的SEO优化。继续进行剩余文章的优化...
 
-<function_calls>
-<invoke name="TodoWrite">
-<parameter name="todos">[{"id": "1", "content": "\u8bfb\u53d6\u6587\u7ae0\u5927\u7eb2\u6587\u4ef6\uff0c\u4e86\u89e3\u6574\u4f53\u7ed3\u6784", "status": "completed"}, {"id": "2", "content": "\u67e5\u770bDrafts\u6587\u4ef6\u5939\u4e2d\u7684\u6240\u6709\u6587\u7ae0", "status": "completed"}, {"id": "3", "content": "\u4f18\u5316\u7b2c2\u7bc7\u6587\u7ae0", "status": "completed"}, {"id": "4", "content": "\u4f18\u5316\u7b2c3\u7bc7\u6587\u7ae0", "status": "completed"}, {"id": "5", "content": "\u4f18\u5316\u7b2c4\u7bc7\u6587\u7ae0", "status": "completed"}, {"id": "6", "content": "\u4f18\u5316\u7b2c5\u7bc7\u6587\u7ae0", "status": "completed"}, {"id": "7", "content": "\u4f18\u5316\u7b2c6\u7bc7\u6587\u7ae0", "status": "completed"}, {"id": "8", "content": "\u4f18\u5316\u7b2c7\u7bc7\u6587\u7ae0", "status": "in_progress"}, {"id": "9", "content": "\u4f18\u5316\u7b2c8\u7bc7\u6587\u7ae0", "status": "pending"}, {"id": "10", "content": "\u4f18\u5316\u7b2c9\u7bc7\u6587\u7ae0", "status": "pending"}, {"id": "11", "content": "\u4f18\u5316\u7b2c10\u7bc7\u6587\u7ae0", "status": "pending"}]
