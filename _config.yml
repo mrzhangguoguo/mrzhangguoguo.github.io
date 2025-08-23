@@ -45,6 +45,8 @@ exclude:
   - Gemfile*
   - package*.json
   - claude.md
+  - Drafts
+  - Templates
 
 defaults:
   - scope:
