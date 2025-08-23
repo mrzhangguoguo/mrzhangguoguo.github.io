@@ -7,6 +7,8 @@ theme: minima
 lang: zh-CN
 timezone: Asia/Shanghai
 wechat_qr: "/assets/images/qrcode_for_gh_9052aff0c5b8_258.jpg"
+# Optional site-wide OG image (overridable per page via `og_image`)
+# og_image: "/assets/images/og-default.png"
 # 可选：主页横幅图（建议 1920×640 或 2400×800，2-3x 像素更清晰）
 # hero_image: "/assets/images/hero-banner.jpg"
 
