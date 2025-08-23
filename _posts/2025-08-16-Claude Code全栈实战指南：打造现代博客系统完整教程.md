@@ -2,6 +2,7 @@
 layout: post
 title: "Claude Code全栈实战指南：打造现代博客系统完整教程"
 date: 2025-08-16 14:00:00 +0800
+last_modified_at: 2025-08-23 17:30:00 +0800
 tags: ["Claude Code 教学大全"]
 excerpt: "通过构建完整的现代化博客系统，深度体验Claude Code的全栈开发能力。从需求分析到生产部署，掌握AI驱动开发的完整流程，亲身感受14-21倍的开发效率提升。"
 permalink: /posts/claude-code-fullstack-blog-tutorial/
@@ -2211,5 +2212,4 @@ export const getCurrentUser = async (req: Request, res: Response, next: NextFunc
   }
 }
 ```
-
 
