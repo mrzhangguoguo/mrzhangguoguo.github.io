@@ -1,6 +1,18 @@
+{% if jekyll.environment == "production" %}
+# Production robots
 User-agent: *
 Allow: /
 
-# Sitemap helps search engines discover your pages faster
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+# De-prioritize or block non-content paths
+Disallow: /tags/
+Disallow: /preview.html
+Disallow: /preview-post.html
+Disallow: /test/
 
+# Primary sitemap
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+{% else %}
+# Non-production builds: block crawling
+User-agent: *
+Disallow: /
+{% endif %}
