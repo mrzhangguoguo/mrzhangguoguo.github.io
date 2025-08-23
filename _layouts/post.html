@@ -15,13 +15,7 @@ layout: default
           <time datetime="{{ page.published_at | default: page.date | date_to_xmlschema }}">
             {{ page.published_at | default: page.date | date: "%Y年%-m月%-d日" }}
           </time>
-          {% if page.tags and page.tags.size > 0 %}
-            <div class="post-tags">
-              {% for tag in page.tags %}
-                <a href="{{ site.baseurl }}/tags/{{ tag | uri_escape }}/" class="tag">#{{ tag }}</a>
-              {% endfor %}
-            </div>
-          {% endif %}
+          {# Tags removed from template #}
         </div>
       </header>
       

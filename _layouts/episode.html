@@ -11,13 +11,7 @@ layout: default
       {% if page.duration_sec %}
         <span class="duration">{{ page.duration_sec | divided_by: 60 }} min</span>
       {% endif %}
-      {% if page.tags and page.tags.size > 0 %}
-        <div class="episode-tags">
-          {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tags/{{ tag | uri_escape }}/" class="tag">#{{ tag }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
+      {# Tags removed from template #}
     </div>
   </header>
   

@@ -15,7 +15,7 @@ permalink: /pages/about/
 - **SEO Optimized**: Built-in SEO features including Open Graph and JSON-LD
 - **Easy Management**: Content management through Decap CMS
 - **RSS Feeds**: Separate feeds for blog posts and podcast episodes
-- **Tag System**: Organize content with tags
+- **Category System**: Organize content with categories
 
 ## Built With
 
@@ -28,7 +28,7 @@ permalink: /pages/about/
 
 1. Visit the [admin panel](/public/admin/) to create content
 2. Browse [posts](/posts/) and [episodes](/episodes/)
-3. Explore content by [tags](/tags/)
+3. Explore content by categories on the homepage
 
 ---
 
