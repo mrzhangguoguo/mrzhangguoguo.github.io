@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code安装配置详解：零门槛搭建AI编程环境"
 date: 2025-08-16 10:00:00 +0800
-tags: [Claude Code, 安装配置, AI编程环境, 开发工具, 教程指南]
+tags: ["Claude Code 教学大全"]
 excerpt: "史上最全Claude Code安装配置教程，涵盖Windows、Mac、Linux全平台部署，包含权限配置、网络优化、常见问题解决方案等核心要点，让你10分钟内完成专业级AI编程环境搭建。"
 permalink: /posts/claude-code-installation-setup-guide/
 redirect_from:

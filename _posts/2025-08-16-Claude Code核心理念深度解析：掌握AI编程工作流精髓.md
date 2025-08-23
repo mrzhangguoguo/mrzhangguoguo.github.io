@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code核心理念深度解析：掌握AI编程工作流精髓"
 date: 2025-08-16 13:00:00 +0800
-tags: [Claude Code核心概念, AI编程工作流, 提示工程, 人机协作, 编程思维]
+tags: ["Claude Code 教学大全"]
 excerpt: "深入剖析Claude Code的核心理念和AI编程工作流，从提示工程到人机协作，从上下文管理到迭代开发，全面掌握AI时代编程的核心技能和思维方式。"
 permalink: /posts/claude-code-core-concepts-workflow/
 redirect_from:

@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code界面操作精通指南：掌握AI编程交互艺术"
 date: 2025-08-16 12:00:00 +0800
-tags: [Claude Code界面, 交互设计, 操作技巧, AI编程工具, 用户体验]
+tags: ["Claude Code 教学大全"]
 excerpt: "深度解析Claude Code的界面设计哲学和操作精髓，从基础交互到高级技巧，全面掌握与AI助手协作的核心技能，让编程变得如丝般顺滑。"
 permalink: /posts/claude-code-ui-operations-mastery/
 redirect_from:

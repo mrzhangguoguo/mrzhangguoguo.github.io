@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code文件操作进阶指南：掌握AI代码生成核心技能"
 date: 2025-08-16 15:00:00 +0800
-tags: [Claude Code文件操作, AI代码生成, 智能编程, 提示工程实战, 开发效率]
+tags: ["Claude Code 教学大全"]
 excerpt: "深入掌握Claude Code的文件操作和智能代码生成技术，从基础操作到高级技巧，从单文件编辑到复杂项目重构，全面提升AI编程的核心技能，实现10-20倍开发效率提升。"
 permalink: /posts/claude-code-file-operations-advanced/
 redirect_from:

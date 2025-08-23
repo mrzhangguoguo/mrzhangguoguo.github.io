@@ -2,7 +2,7 @@
 layout: post
 title: "Claude Code完全入门指南：AI编程助手如何颠覆传统开发模式"
 date: 2025-08-16 09:00:00 +0800
-tags: [Claude Code, AI编程, 智能开发工具, 人工智能助手, 编程效率]
+tags: ["Claude Code 教学大全"]
 excerpt: "深度解析Claude Code：Anthropic推出的革命性AI编程助手，如何通过自然语言交互彻底改变开发者的工作方式，开启AI驱动编程的新时代。"
 permalink: /posts/claude-code-beginner-guide-ai-coding-assistant/
 redirect_from:
