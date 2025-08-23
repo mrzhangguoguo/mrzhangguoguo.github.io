@@ -15,6 +15,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
+# Optional: will be injected at build time via GitHub Actions secret.
+# Do not set here in the public repo to avoid exposing the token.
+# google_site_verification: ""
+
 # Markdown & Syntax highlighting
 markdown: kramdown
 highlighter: rouge

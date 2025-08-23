@@ -1,0 +1,20 @@
+🚀 测试服务器
+========================================
+📁 服务目录: /Users/limanman/Downloads/同步空间/开发/Blogs-for-github
+🌐 访问地址: http://localhost:8000
+   按 Ctrl+C 停止服务器
+========================================
+⚠️  注意：此服务器直接服务Markdown文件，不会渲染Jekyll模板
+   要查看完整渲染的站点，需要使用Jekyll构建
+Traceback (most recent call last):
+  File "/Users/limanman/Downloads/同步空间/开发/Blogs-for-github/test_server.py", line 50, in <module>
+    main()
+  Fil127.0.0.1 - - [20/Aug/2025 16:33:13] "GET /assets/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [20/Aug/2025 16:33:13] code 404, message File not found
+127.0.0.1 - - [20/Aug/2025 16:33:13] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [20/Aug/2025 16:33:22] "GET /assets/css/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [20/Aug/2025 17:02:52] code 404, message File not found
+127.0.0.1 - - [20/Aug/2025 17:02:52] "GET / HTTP/1.1" 404 -
+127.0.0.1 - - [20/Aug/2025 17:02:53] code 404, message File not found
+127.0.0.1 - - [20/Aug/2025 17:02:53] "GET /favicon.ico HTTP/1.1" 404 -
+ady in use

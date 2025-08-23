@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap helps search engines discover your pages faster
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
+

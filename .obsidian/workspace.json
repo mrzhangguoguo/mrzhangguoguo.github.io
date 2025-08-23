@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "a10be9970989b0ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2fc2b29b32fd12e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "19a494b2ca36f5b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7037bbd824b74d43",
+    "type": "split",
+    "children": [
+      {
+        "id": "42efcb9c0da47cae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3a9545fb9bc1577",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "457fdef8a5fbd353",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "50f9bd392e6f2280",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "7ff9f792c48744b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "2cb43d99eaac7a81",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e360c5cf72643f92",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能 的反向链接列表"
+            }
+          },
+          {
+            "id": "be86641e52ee2741",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能 的出链列表"
+            }
+          },
+          {
+            "id": "0263bfbc63c20023",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d8da8accfb574e9e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能 的大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "19a494b2ca36f5b3",
+  "lastOpenFiles": [
+    "robots.txt",
+    "Drafts/2025-08-16-welcome-to-your-new-blog.md",
+    "Drafts/2025-08-16-how-to-use-blog.md",
+    "_posts/2025-08-16-Claude Code界面操作精通指南：掌握AI编程交互艺术.md",
+    "_posts/2025-08-16-Claude Code核心理念深度解析：掌握AI编程工作流精髓.md",
+    "_posts/2025-08-16-Claude Code安装配置详解：零门槛搭建AI编程环境.md",
+    "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md",
+    "Drafts/01-什么是Claude-Code.md",
+    "_posts/2025-08-16-Claude Code全栈实战指南：打造现代博客系统完整教程.md.baiduyun.p.downloading",
+    "pages/categories/index.html",
+    "pages/categories/claude-code.md",
+    "pages/categories",
+    "_posts/2025-08-16-Claude Code首次使用指南：十分钟创建完整项目.md.baiduyun.p.downloading",
+    "_posts/2025-08-16-Claude Code文件操作进阶指南：掌握AI代码生成核心技能.md.baiduyun.p.downloading",
+    "_data/categories.yml",
+    "_layouts/category.html",
+    "_data",
+    "_posts/2025-08-16-welcome-to-your-new-blog.md.baiduyun.p.downloading",
+    "_posts/2025-08-16-how-to-use-blog.md.baiduyun.p.downloading",
+    "assets/images/qrcode_for_gh_9052aff0c5b8_258.jpg",
+    "_posts/2025-08-16-Claude Code首次使用指南：十分钟创建完整项目.md",
+    "_posts/2025-08-16-Claude Code全栈实战指南：打造现代博客系统完整教程.md",
+    "agent.md",
+    "_posts/2025-08-16-Claude Code完全入门指南：AI编程助手如何颠覆传统开发模式.md",
+    "Drafts/04-Claude Code界面操作精通指南：掌握AI编程交互艺术.md",
+    "Drafts/05-Claude Code核心理念深度解析：掌握AI编程工作流精髓.md",
+    "Drafts/02-Claude Code安装配置详解：零门槛搭建AI编程环境.md",
+    "Drafts/03-Claude Code首次使用指南：十分钟创建完整项目.md",
+    "Drafts/01-Claude Code完全入门指南：AI编程助手如何颠覆传统开发模式.md",
+    "Drafts/01-Claude Code深度解析：AI编程革命时代的全面解读.md",
+    "Drafts/01-果叔深度解析：Claude Code究竟是什么-AI编程革命的哲学思考.md",
+    "Drafts/02-Claude-Code安装配置指南.md",
+    "Drafts/Claude-Code-教程系列大纲.md",
+    "Drafts/38-Claude-Code未来发展趋势.md",
+    "Drafts/37-国际化与本地化实践.md",
+    "Drafts/35-AI模型集成与定制.md",
+    "Drafts/36-性能优化与调试技巧.md"
+  ]
+}

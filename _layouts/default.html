@@ -8,8 +8,10 @@
   
   {% include head-seo.html %}
   
-  <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="Oox66ofB-Lc8pVOfQxDVNY0gHge_5fpPqtnF9npOC5k" />
+  <!-- Google Search Console Verification (injected via config/Actions) -->
+  {% if site.google_site_verification %}
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
+  {% endif %}
   
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
