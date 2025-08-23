@@ -1,0 +1,18 @@
+/.DS_Store
+/.obsidian/
+/.preview.log
+/.preview.pid
+/.env
+
+# Local drafts or temp files at repo root
+/07-*.md
+
+# Build caches and vendor
+/_site/
+/.jekyll-cache/
+/.bundle/
+/.sass-cache/
+/vendor/
+/node_modules/
+*.log
+
