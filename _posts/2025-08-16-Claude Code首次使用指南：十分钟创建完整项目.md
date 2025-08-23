@@ -1299,9 +1299,9 @@ npm run speed-test
 
 ### 深入学习
 
-1. 阅读[《Claude Code界面布局与基本操作》](04-界面布局与基本操作.md)
-2. 学习[《核心概念：理解AI编程工作流》](05-核心概念理解AI编程工作流.md)
-3. 掌握[《文件操作与代码生成精讲》](07-文件操作与代码生成精讲.md)
+1. 阅读[《Claude Code界面布局与基本操作》](/posts/claude-code-ui-operations-mastery/)
+2. 学习[《核心概念：理解AI编程工作流》](/posts/claude-code-core-concepts-workflow/)
+3. 掌握[《文件操作与代码生成精讲》](/posts/claude-code-file-operations-advanced/)
 
 ### 实际项目应用
 
