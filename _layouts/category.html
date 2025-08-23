@@ -29,7 +29,7 @@ layout: default
                 <time datetime="{{ post.published_at | default: post.date | date_to_xmlschema }}">
                   {{ post.published_at | default: post.date | date: "%Y年%-m月%-d日" }}
                 </time>
-                {# Tags removed from template #}
+                
               </div>
               {% if post.excerpt %}
                 <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
