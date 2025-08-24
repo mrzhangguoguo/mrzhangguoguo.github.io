@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "与未来的契约：我如何用 Claude Code 实践“反直觉”的测试驱动开发"
-date: 2025-08-24 18:00:00 +0800
+date: 2025-08-24 09:00:00 +0800
 tags: ["Claude Code", "TDD", "测试驱动开发", "单元测试", "质量保证", "软件哲学", "工程文化"]
 excerpt: "测试，对许多开发者而言，是激情编码后的一项乏味苦差。但 TDD 恰恰相反，它是一种先于代码的承诺。本文将深入探讨我如何利用 Claude Code，将这门“苦行僧”般的技艺，转变为一种能带来内心宁静与开发自信的“人机协同艺术”。"
 permalink: /posts/claude-code-test-driven-development-future-contract/

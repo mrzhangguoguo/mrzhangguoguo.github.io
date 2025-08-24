@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GitFlow已死，AI永生？我如何用Claude Code重塑团队的协作协议"
-date: 2025-08-24 19:00:00 +0800
+date: 2025-08-24 09:00:00 +0800
 tags: ["Claude Code", "Git", "版本控制", "团队协作", "工程效能", "工作流", "GitFlow"]
 excerpt: "Git 的问题，从来都不是技术问题，而是人的问题。混乱的提交、频繁的冲突、缺失的规范……这些都是团队协作的无形内耗。本文将深入探讨，我如何用 Claude Code，将 Git 从一个单纯的版本控制工具，升级为一套智能、自洽、高效的团队协作协议。"
 permalink: /posts/claude-code-reinvent-team-collaboration-protocol/

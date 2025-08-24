@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "代码的“翻译官”：我如何用 Claude Code 终结“文档没人写、写了没人看”的宿命"
-date: 2025-08-24 20:00:00 +0800
+date: 2025-08-24 09:00:00 +0800
 tags: ["Claude Code", "文档生成", "技术写作", "知识管理", "工程文化", "API文档"]
 excerpt: "文档，是团队知识的沉淀，是代码思想的延续。但它也常常是项目的“烂尾楼”。本文将分享我如何利用 Claude Code，构建一个自动化的“文档工厂”，将文档从一项繁重的“债务”，转变为可持续增值的“资产”。"
 permalink: /posts/claude-code-documentation-translator-end-docs-fate/
