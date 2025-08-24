@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Agent 使用说明"
+permalink: /pages/agent/
+---
+
 1. 理解目前项目：阅读BLOG_GUIDE.md
 2. 理解项目架构：阅读READDME.md
 3. 遵从本项目技术栈
