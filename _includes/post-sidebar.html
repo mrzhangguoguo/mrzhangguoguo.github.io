@@ -3,10 +3,14 @@
   <div class="sidebar-widget ad-widget">
     <div class="ad-container">
       {% if page.sidebar_ad %}
-        <img src="{{ page.sidebar_ad | relative_url }}" alt="推荐内容" />
+        <a href="https://code.yoretea.com" target="_blank" rel="noopener" class="recommendation-link">
+          <img src="{{ page.sidebar_ad | relative_url }}" alt="推荐内容" />
+        </a>
       {% else %}
-        <!-- 默认广告图片 -->
-        <img src="{{ '/assets/images/default-ad.png' | relative_url }}" alt="推荐内容" />
+        <!-- 默认广告图片（统一推广位） -->
+        <a href="https://code.yoretea.com" target="_blank" rel="noopener" class="recommendation-link">
+          <img src="{{ '/assets/images/521431231.png' | relative_url }}" alt="推荐内容" />
+        </a>
       {% endif %}
     </div>
   </div>

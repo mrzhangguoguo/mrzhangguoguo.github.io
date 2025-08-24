@@ -89,8 +89,8 @@ assets/
 ### 3. 特殊图片
 
 - **微信二维码**: `assets/images/wechat-qr.png`
-- **默认广告图**: `assets/images/default-ad.png`
-- **文章自定义广告**: 在Front Matter中指定`sidebar_ad`
+- **默认广告图**: `assets/images/521431231.png`（全站侧栏推广位，点击跳转至 https://code.yoretea.com ）
+- **文章自定义广告**: 在Front Matter中指定`sidebar_ad`（图片仍将链接到 https://code.yoretea.com）
 
 ## 三、发布播客
 
