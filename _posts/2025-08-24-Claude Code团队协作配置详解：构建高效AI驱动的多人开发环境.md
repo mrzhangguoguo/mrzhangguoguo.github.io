@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code团队协作配置详解：构建高效AI驱动的多人开发环境"
-date: 2025-08-26 12:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "团队协作", "多人开发配置", "权限管理", "智能协作", "开发环境标准化", "团队知识管理", "AI协同开发"]
 excerpt: "深入解析Claude Code在团队环境中的配置管理策略，从权限控制到智能协作工作流，打造标准化的多人AI开发环境，让团队协作效率实现质的飞跃。"
 permalink: /posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/

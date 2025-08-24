@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code内存管理与上下文优化：让AI成为长期记忆的智能编程伙伴"
-date: 2025-08-26 00:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "内存管理", "上下文优化", "长期记忆", "对话连续性", "智能缓存", "知识图谱", "个性化学习"]
 excerpt: "深入探索Claude Code的智能内存系统与上下文优化机制，从多层次记忆架构到知识图谱构建，掌握让AI助手在长期项目协作中保持一致性和持续学习能力的核心技术。"
 permalink: /posts/claude-code-memory-management-context-optimization-long-term-ai-programming-partner/

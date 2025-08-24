@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code高级配置与性能调优：释放AI编程助手的极致潜能"
-date: 2025-08-26 06:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "性能调优", "高级配置", "系统优化", "资源管理", "监控分析", "故障排除", "自动化运维"]
 excerpt: "深入探索Claude Code的高级配置选项和性能调优技巧，从智能配置管理到资源优化策略，掌握让AI编程助手在各种复杂环境下都能保持最佳性能的核心技术。"
 permalink: /posts/claude-code-advanced-configuration-performance-tuning-maximum-potential/

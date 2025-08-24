@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code计划模式深度解析：让AI成为你的项目规划大师"
-date: 2025-08-25 12:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "计划模式", "项目规划", "任务分解", "执行监控", "项目管理", "AI编程"]
 excerpt: "深入探索Claude Code的计划模式功能，从复杂项目规划到任务分解执行，掌握AI驱动的项目管理和执行监控技能，让AI成为你的专业项目规划顾问。"
 permalink: /posts/claude-code-plan-mode-deep-analysis-ai-project-planning-master/

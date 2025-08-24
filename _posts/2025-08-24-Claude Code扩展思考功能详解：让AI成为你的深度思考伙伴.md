@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code扩展思考功能详解：让AI成为你的深度思考伙伴"
-date: 2025-08-25 15:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "扩展思考", "复杂问题解决", "推理分析", "AI思维", "深度分析", "决策支持"]
 excerpt: "深入探索Claude Code的扩展思考功能，从复杂问题分析到推理过程透明化，掌握AI深度思考和问题解决的核心技能，让AI成为你的智能思考伙伴。"
 permalink: /posts/claude-code-extended-thinking-deep-analysis-ai-thinking-partner/

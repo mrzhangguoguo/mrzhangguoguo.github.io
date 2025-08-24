@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code钩子Hooks系统详解：打造事件驱动的智能开发工作流"
-date: 2025-08-26 03:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "Hooks系统", "事件驱动", "自动化工作流", "CI/CD集成", "开发效率", "智能触发器", "代码质量"]
 excerpt: "深度解析Claude Code的钩子系统架构与事件处理机制，从文件监听到智能触发器，掌握构建零干扰自动化开发工作流的核心技术，实现真正的事件驱动编程体验。"
 permalink: /posts/claude-code-hooks-system-event-driven-intelligent-development-workflow/

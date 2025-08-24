@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code子代理系统深入：专业化AI团队的协作编程"
-date: 2025-08-25 21:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "子代理", "Sub-Agents", "AI协作", "专业化编程", "团队协作", "多代理系统"]
 excerpt: "深入探索Claude Code的子代理系统，从专用代理创建到多代理协作，构建高效的专业化AI编程团队，实现复杂任务的智能分工和协作编程。"
 permalink: /posts/claude-code-sub-agents-system-specialized-ai-team-collaborative-programming/

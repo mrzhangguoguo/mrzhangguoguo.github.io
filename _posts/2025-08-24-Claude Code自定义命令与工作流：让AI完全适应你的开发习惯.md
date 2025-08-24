@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Code自定义命令与工作流：让AI完全适应你的开发习惯"
-date: 2025-08-25 18:00:00 +0800
+date: 2025-08-24 23:00:00 +0800
 tags: ["Claude Code", "自定义命令", "工作流", "斜杠命令", "开发效率", "自动化", "个性化定制"]
 excerpt: "深入探索Claude Code的自定义命令系统和工作流设计，从斜杠命令创建到复杂工作流自动化，打造完全个性化的AI编程助手，让工具完美适应你的开发需求。"
 permalink: /posts/claude-code-custom-commands-workflow-personalized-ai-programming-assistant/
