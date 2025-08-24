@@ -1,11 +1,14 @@
 
-```
 ---
 layout: post
 title: "代码的宿命与重构：我如何用 Claude Code 将“技术债”变为“技术资产”"
 date: 2025-08-16 17:00:00 +0800
-tags: [Claude Code, 代码重构, 技术债, 代码美学, 软件工程, 架构设计, 最佳实践]
+tags: ["Claude Code", "代码重构", "技术债", "代码美学", "软件工程", "架构设计", "最佳实践"]
 excerpt: "代码和城市一样，会熵增、会腐化。重构，是我们对抗混乱的唯一武器。本文是我使用 Claude Code 进行代码重构的完整心法，探讨如何将不可避免的技术债，战略性地转化为未来的技术资产。"
+permalink: /posts/claude-code-refactoring-turn-technical-debt-into-assets/
+redirect_from:
+  - "/posts/代码的宿命与重构：我如何用 Claude Code 将“技术债”变为“技术资产”/"
+categories: ["Claude Code 教学大全"]
 ---
 
 ## 引言：每一行代码，都有它的宿命
@@ -86,7 +89,7 @@ AI辅助重构流程：
 - 📊 **系统性优化**：从重复代码到架构缺陷，提供一整套改进方案。
     
 
-````
+```
 
 ## Claude Code 重构实战：从“码农”到“代码建筑师”
 
@@ -111,7 +114,7 @@ claude """
 4. 性能瓶颈
 5. 安全隐患
 """
-````
+```
 
 **果叔点评**：这份由 AI 生成的报告，价值远超一个普通的 Linter 工具。它不仅仅是规则检查，而是基于对项目整体结构的理解，给出了带有优先级的战略建议。这份报告，就是你未来几周重构工作的 roadmap。
 
@@ -153,7 +156,7 @@ src/components/UserDashboard/
 
 Bash
 
-````
+```
 claude """
 这个支付处理函数充满了 if-else，每次新增支付方式都要修改主体逻辑，违反了“开闭原则”。请用策略模式 (Strategy Pattern) 对其进行重构。
 
