@@ -16,3 +16,8 @@
 /node_modules/
 *.log
 
+# Ignore Baidu Netdisk temporary upload configs
+*.baiduyun.uploading.cfg
+
+# Stop tracking local agent instruction file
+agent.md
