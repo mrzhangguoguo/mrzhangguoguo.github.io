@@ -11,7 +11,7 @@ categories: ["Claude Code 教学大全"]
 ---
 
 ## 引言：我的“Token 震撼”时刻 
-![](/assets/images/未命名项目-图层%201%20(6).jpeg)
+![AI Agent Token 消耗与成本示意图](/assets/images/2025/08/ai-agent-token-costs-hero.jpeg)
 
 你好，我是果叔。
 
@@ -114,11 +114,11 @@ categories: ["Claude Code 教学大全"]
 你可能会想，这只是 Claude Code 的特例吗？恰恰相反。这几乎是所有高级 AI Agent 系统共同的“物理定律”。为了验证这一点，我最近用另一款名为 Codex 的 Agent，对我自己的博客站进行了一些小修小改，整个过程大约一小时。
 
 结果让我倒吸一口凉气。请看这张消耗报告。输入 Tokens，如果算上为了维持上下文记忆而产生的缓存（cached），总数竟然飙升到了惊人的 **1500 万** 以上！
-![](/assets/images/15123121.png)
+![Codex Agent Token 消耗报告截图](/assets/images/2025/08/codex-token-usage-report.png)
 
 天文数字般的 Tokens 最终会转化为真实的账单。我曾经也尝试过一些看似廉价的国产替代方案，比如阿里云百炼的 Qwen Coder，但很快就因为高昂的“缓存 Token”计费而收到了欠费提醒。我们来看看它的价格模型，你会发现，对于 Agent 这种动辄百万 Token 消耗的场景，真正决定成本的，是高用量区间的价格，以及那个不起眼的“命中缓存输入价格”。
 
-![](/assets/images/543234.png)
+![Qwen Coder 计费价格模型截图](/assets/images/2025/08/qwen-coder-pricing.png)
 
 简单匡算一下，我那一小时不到的博客站修改工作，如果放在这个平台上，账单可能就高达数十元。这还只是一个人的、一小时的、小修小改的工作！这清晰地揭示了一个事实：**Agent 的强大能力，是以巨大的计算资源和 Token 消耗为代价的，无论你使用哪家的服务，这个底层逻辑都无法改变。**
 
