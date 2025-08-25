@@ -41,9 +41,23 @@ cp "$DRAFT_FILE" "$POST_FILE"
 echo "✅ 文章已发布: $POST_FILE"
 echo ""
 
+# 链接校验：拦截本地路径/临时文件引用
+if [ -x ./scripts/validate-links.sh ]; then
+    echo "🔎 正在执行链接校验（禁止本地/临时路径）..."
+    if ! ./scripts/validate-links.sh; then
+        echo "❌ 链接校验失败：发现本地路径/临时文件引用。已取消本次发布。"
+        rm -f "$POST_FILE"
+        exit 2
+    fi
+fi
+
 # 询问是否立即部署
 read -p "是否立即部署到GitHub Pages? (y/N): " deploy
 if [ "$deploy" = "y" ] || [ "$deploy" = "Y" ]; then
+    # 部署前再次执行校验，双保险
+    if [ -x ./scripts/validate-links.sh ]; then
+        ./scripts/validate-links.sh || { echo "❌ 链接校验失败，已中止部署"; exit 2; }
+    fi
     ./deploy.sh "发布文章：$TITLE"
     echo "🚀 已部署到线上"
 else

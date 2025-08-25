@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /pages/about/
+sitemap: true
 ---
 
 # About
