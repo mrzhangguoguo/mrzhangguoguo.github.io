@@ -14,24 +14,7 @@ wechat_qr: "/assets/images/qrcode_for_gh_9052aff0c5b8_258.jpg"
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-redirect-from
-
-# Sitemap settings  
-sitemap:
-  file: /sitemap.xml
-  exclude:
-    - /public/
-    - /assets/
-    - /test/
-    - /preview.html
-    - /preview-post.html
-    - /Drafts/
-    - /setup-docker-proxy.md
-    - /BLOG_GUIDE.md
-    - /DEPLOYMENT_CHECKLIST.md
-    - /LOCAL_SETUP.md
-    - /TEST_PLAN.md
 
 # Google Search Console verification (public for branch-based Pages build)
 google_site_verification: "Oox66ofB-Lc8pVOfQxDVNY0gHge_5fpPqtnF9npOC5k"
@@ -79,17 +62,11 @@ defaults:
       type: posts
     values:
       layout: post
-      sitemap:
-        priority: 0.7
-        changefreq: monthly
   - scope:
       path: ""
       type: episodes
     values:
       layout: episode
-      sitemap:
-        priority: 0.6
-        changefreq: monthly
   # Do not include admin or asset files in sitemap; hint crawlers not to index
   - scope:
       path: "public"

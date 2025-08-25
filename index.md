@@ -1,9 +1,6 @@
 ---
 layout: default
 title: Home
-sitemap: 
-  priority: 1.0
-  changefreq: daily
 ---
 
 <div class="home-wrapper">
