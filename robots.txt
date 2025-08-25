@@ -1,18 +1,13 @@
-{% if jekyll.environment == "production" %}
-# Production robots
+# Production robots (static)
 User-agent: *
 Allow: /
 
-# De-prioritize or block non-content paths
-# 允许标签页被索引（已修复 404）
+# Block non-content utility paths
 Disallow: /preview.html
 Disallow: /preview-post.html
 Disallow: /test/
+Disallow: /public/
+Disallow: /public/admin/
 
 # Primary sitemap
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
-{% else %}
-# Non-production builds: block crawling
-User-agent: *
-Disallow: /
-{% endif %}
+Sitemap: https://mrzhangguoguo.github.io/sitemap.xml
