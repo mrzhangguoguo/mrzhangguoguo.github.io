@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "揭秘AI编程天价账单：为什么AI Agent会“烧”掉天文数字的Tokens？"
-date: 2025-08-25 21:00:00 +0800
+date: 2025-08-25 10:00:00 +0800
 tags: ["Claude Code 教学大全"]
 excerpt: "AI Agent 正在改变软件开发，但其惊人的Token消耗和高昂的成本也让许多人望而却步。本文将从第一性原理出发，通过真实案例深度剖析AI智能体（如Claude Code, Codex）消耗海量Tokens的底层逻辑，并探讨如何有效管理这一新型生产力成本。"
 permalink: /posts/claude-code-why-ai-agents-burn-astronomical-tokens/
