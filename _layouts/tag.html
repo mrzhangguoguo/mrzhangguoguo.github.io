@@ -14,10 +14,11 @@ layout: default
   <div class="home-content">
     <section class="recent-posts">
       <h2>相关文章</h2>
-      {% assign filtered_posts = site.posts | where_exp: "p", "p.tags contains tag_name and p.draft != true" %}
+      {% assign filtered_posts = site.posts | where_exp: "p", "p.tags contains tag_name" %}
       {% if filtered_posts.size > 0 %}
         <div class="post-list">
           {% for post in filtered_posts %}
+            {% unless post.draft %}
             <article class="post-card">
               <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
               <div class="post-meta">
@@ -36,6 +37,7 @@ layout: default
                 <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
               {% endif %}
             </article>
+            {% endunless %}
           {% endfor %}
         </div>
       {% else %}
@@ -45,10 +47,11 @@ layout: default
 
     <section class="recent-episodes">
       <h2>相关播客</h2>
-      {% assign filtered_eps = site.episodes | where_exp: "e", "e.tags contains tag_name and e.draft != true" %}
+      {% assign filtered_eps = site.episodes | where_exp: "e", "e.tags contains tag_name" %}
       {% if filtered_eps.size > 0 %}
         <div class="episode-list">
           {% for ep in filtered_eps %}
+            {% unless ep.draft %}
             <article class="episode-card">
               <h3><a href="{{ ep.url | relative_url }}">{{ ep.title }}</a></h3>
               <div class="episode-meta">
@@ -60,6 +63,7 @@ layout: default
                 {% endif %}
               </div>
             </article>
+            {% endunless %}
           {% endfor %}
         </div>
       {% else %}
@@ -70,4 +74,3 @@ layout: default
 
   {% include home-sidebar.html %}
 </div>
-
