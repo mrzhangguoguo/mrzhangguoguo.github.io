@@ -2,6 +2,9 @@
 layout: default
 title: About
 permalink: /pages/about/
+sitemap:
+  priority: 0.8
+  changefreq: monthly
 ---
 
 # About
