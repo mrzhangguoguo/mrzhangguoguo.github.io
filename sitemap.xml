@@ -1,44 +1,75 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>{{ site.url }}/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <!-- Static pages (About only) -->
-  <url>
-    <loc>{{ site.url }}/pages/about/</loc>
-    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Blog posts with English permalinks only -->
-  {% for post in site.posts %}
-    {% comment %}Only include posts that have explicit English permalinks set{% endcomment %}
-    {% if post.permalink and post.permalink contains "/posts/" and post.permalink != "/posts/:slug/" %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-    </url>
-    {% endif %}
-  {% endfor %}
-  
-  <!-- Episodes -->
-  {% for episode in site.episodes %}
-  <url>
-    <loc>{{ site.url }}{{ episode.url }}</loc>
-    <lastmod>{{ episode.date | date_to_xmlschema }}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {% endfor %}
+<url>
+<loc>https://mrzhangguoguo.github.io/</loc>
+<lastmod>2025-08-25T18:00:00+08:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/pages/about/</loc>
+<lastmod>2025-08-25T18:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-beginner-guide-ai-coding-assistant/</loc>
+<lastmod>2025-08-16T09:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-installation-setup-guide/</loc>
+<lastmod>2025-08-16T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-first-steps-10min-full-project/</loc>
+<lastmod>2025-08-16T11:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-ui-operations-mastery/</loc>
+<lastmod>2025-08-16T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-core-concepts-ai-programming-workflow/</loc>
+<lastmod>2025-08-16T13:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-file-operations-advanced-ai-code-generation/</loc>
+<lastmod>2025-08-16T14:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-fullstack-project-modern-blog-system/</loc>
+<lastmod>2025-08-16T15:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-code-review-chief-quality-officer/</loc>
+<lastmod>2025-08-24T12:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/posts/claude-code-why-ai-agents-burn-astronomical-tokens/</loc>
+<lastmod>2025-08-25T10:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://mrzhangguoguo.github.io/episodes/welcome-episode/</loc>
+<lastmod>2025-08-25T16:59:41+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
 </urlset>
