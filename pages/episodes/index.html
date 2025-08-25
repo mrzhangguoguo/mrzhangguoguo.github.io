@@ -1,0 +1,22 @@
+---
+layout: default
+title: 所有播客
+permalink: /episodes/
+---
+
+<section class="all-episodes">
+  <h1>所有播客</h1>
+  <ul class="episode-archive">
+    {% assign all_episodes = site.episodes | where_exp: "ep", "ep.draft != true" %}
+    {% for ep in all_episodes %}
+      <li>
+        <time datetime="{{ ep.published_at | default: ep.date | date_to_xmlschema }}">
+          {{ ep.published_at | default: ep.date | date: "%Y年%-m月%-d日" }}
+        </time>
+        — <a href="{{ ep.url | relative_url }}">{{ ep.title }}</a>
+        {% if ep.duration_sec %}<span class="duration">（{{ ep.duration_sec | divided_by: 60 }} 分钟）</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+

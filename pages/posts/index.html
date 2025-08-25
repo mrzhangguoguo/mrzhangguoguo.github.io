@@ -1,0 +1,21 @@
+---
+layout: default
+title: 所有文章
+permalink: /posts/
+---
+
+<section class="all-posts">
+  <h1>所有文章</h1>
+  <ul class="post-archive">
+    {% assign all_posts = site.posts | where_exp: "post", "post.draft != true" %}
+    {% for post in all_posts %}
+      <li>
+        <time datetime="{{ post.published_at | default: post.date | date_to_xmlschema }}">
+          {{ post.published_at | default: post.date | date: "%Y年%-m月%-d日" }}
+        </time>
+        — <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
