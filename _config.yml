@@ -47,6 +47,15 @@ exclude:
   - claude.md
   - Drafts
   - Templates
+  # Developer docs and non-public pages (exclude from build and sitemap)
+  - BLOG_GUIDE.md
+  - DEPLOYMENT_CHECKLIST.md
+  - LOCAL_SETUP.md
+  - TEST_PLAN.md
+  - post-management
+  - preview.html
+  - preview-post.html
+  - setup-docker-proxy.md
 
 defaults:
   - scope:
@@ -59,3 +68,14 @@ defaults:
       type: episodes
     values:
       layout: episode
+  # Do not include admin or asset files in sitemap; hint crawlers not to index
+  - scope:
+      path: "public"
+    values:
+      sitemap: false
+      robots: noindex
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+      robots: noindex
