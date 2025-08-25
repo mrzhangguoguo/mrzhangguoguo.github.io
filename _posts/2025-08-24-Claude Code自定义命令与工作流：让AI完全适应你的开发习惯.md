@@ -811,10 +811,10 @@ performance_monitoring:
 
 ## 相关文章推荐
 
-- [扩展思考Extended Thinking功能详解](16-扩展思考Extended-Thinking功能详解.md)
-- [子代理Sub-Agents系统深入](18-子代理Sub-Agents系统深入.md)
-- [内存管理与上下文优化](19-内存管理与上下文优化.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
+- [扩展思考Extended Thinking功能详解](/posts/claude-code-extended-thinking-deep-analysis-ai-thinking-partner/)
+- [子代理Sub-Agents系统深入](/posts/claude-code-sub-agents-system-specialized-ai-team-collaborative-programming/)
+- [内存管理与上下文优化](/posts/claude-code-memory-management-context-optimization-long-term-ai-programming-partner/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
 
 ---
 

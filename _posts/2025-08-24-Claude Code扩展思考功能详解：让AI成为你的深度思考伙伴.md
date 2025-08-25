@@ -444,10 +444,10 @@ Extended Thinking不仅提升了问题解决能力，更重要的是培养了**�
 
 ## 相关文章推荐
 
-- [计划模式Plan Mode深度解析](15-计划模式Plan-Mode深度解析.md)
-- [自定义命令与工作流](17-自定义命令与工作流.md)
-- [子代理Sub-Agents系统深入](18-子代理Sub-Agents系统深入.md)
-- [内存管理与上下文优化](19-内存管理与上下文优化.md)
+- [计划模式Plan Mode深度解析](/posts/claude-code-plan-mode-deep-analysis-ai-project-planning-master/)
+- [自定义命令与工作流](/posts/claude-code-custom-commands-workflow-personalized-ai-programming-assistant/)
+- [子代理Sub-Agents系统深入](/posts/claude-code-sub-agents-system-specialized-ai-team-collaborative-programming/)
+- [内存管理与上下文优化](/posts/claude-code-memory-management-context-optimization-long-term-ai-programming-partner/)
 
 ---
 

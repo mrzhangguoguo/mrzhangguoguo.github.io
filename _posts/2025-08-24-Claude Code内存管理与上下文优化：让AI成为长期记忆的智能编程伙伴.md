@@ -437,10 +437,10 @@ class UserService {
 
 ## 相关文章推荐
 
-- [子代理Sub-Agents系统深入](18-子代理Sub-Agents系统深入.md)
-- [钩子Hooks系统与事件处理](20-钩子Hooks系统与事件处理.md)
-- [高级配置与性能调优](21-高级配置与性能调优.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
+- [子代理Sub-Agents系统深入](/posts/claude-code-sub-agents-system-specialized-ai-team-collaborative-programming/)
+- [钩子Hooks系统与事件处理](/posts/claude-code-hooks-system-event-driven-intelligent-development-workflow/)
+- [高级配置与性能调优](/posts/claude-code-advanced-configuration-performance-tuning-maximum-potential/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
 
 ---
 

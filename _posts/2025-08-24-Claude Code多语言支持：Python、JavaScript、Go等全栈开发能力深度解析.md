@@ -844,10 +844,10 @@ Claude Code让多语言开发不再是负担，而是释放创造力的工具。
 
 ## 相关文章推荐
 
-- [代码审查与质量保证](13-代码审查与质量保证.md)
-- [计划模式Plan Mode深度解析](15-计划模式Plan-Mode深度解析.md)
-- [全栈Web应用开发实战](28-全栈Web应用开发实战.md)
-- [微服务架构项目实践](29-微服务架构项目实践.md)
+- [代码审查与质量保证](/posts/claude-code-code-review-chief-quality-officer/)
+- [计划模式Plan Mode深度解析](/posts/claude-code-plan-mode-deep-analysis-ai-project-planning-master/)
+- [全栈Web应用开发实战](#) <!-- 这篇文章还未找到对应的permalink -->
+- [微服务架构项目实践](#) <!-- 这篇文章还未找到对应的permalink -->
 
 ---
 

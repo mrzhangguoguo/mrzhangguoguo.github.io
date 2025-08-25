@@ -1242,10 +1242,10 @@ enterprise_multi_team_collaboration:
 
 ## 相关文章推荐
 
-- [MCP协议深度解析：构建AI驱动的全能开发生态](22-MCP协议连接外部工具的桥梁.md)
-- [CI/CD集成：持续集成持续部署最佳实践](24-CICD集成持续集成持续部署.md)
-- [企业安全配置：权限管理与数据保护](25-企业安全权限管理与数据保护.md)
-- [监控运维：生产环境最佳实践](27-监控与运维生产环境最佳实践.md)
+- [MCP协议深度解析：构建AI驱动的全能开发生态](/posts/claude-code-mcp-protocol-comprehensive-guide-ai-development-ecosystem/)
+- [CI/CD集成：持续集成持续部署最佳实践](/posts/claude-code-cicd-integration-intelligent-continuous-integration-deployment/)
+- [企业安全配置：权限管理与数据保护](/posts/claude-code-enterprise-security-permission-management-data-protection/)
+- [监控运维：生产环境最佳实践](/posts/claude-code-intelligent-monitoring-operations-production-environment-best-practices/)
 
 ---
 

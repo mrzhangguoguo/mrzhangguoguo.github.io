@@ -1264,10 +1264,10 @@ enterprise_security_config:
 
 ## 相关文章推荐
 
-- [高级配置与性能调优](21-高级配置与性能调优.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
-- [CI/CD集成：持续集成持续部署](24-CICD集成持续集成持续部署.md)
-- [企业安全：权限管理与数据保护](25-企业安全权限管理与数据保护.md)
+- [高级配置与性能调优](/posts/claude-code-advanced-configuration-performance-tuning-maximum-potential/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
+- [CI/CD集成：持续集成持续部署](/posts/claude-code-cicd-integration-intelligent-continuous-integration-deployment/)
+- [企业安全：权限管理与数据保护](/posts/claude-code-enterprise-security-permission-management-data-protection/)
 
 ---
 

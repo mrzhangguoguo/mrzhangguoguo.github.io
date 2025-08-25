@@ -744,10 +744,10 @@ enterprise_production_config:
 
 ## 相关文章推荐
 
-- [钩子Hooks系统与事件处理](20-钩子Hooks系统与事件处理.md)
-- [MCP协议：连接外部工具的桥梁](22-MCP协议连接外部工具的桥梁.md)
-- [监控与运维：生产环境最佳实践](27-监控与运维生产环境最佳实践.md)
-- [性能优化与调试技巧](36-性能优化与调试技巧.md)
+- [钩子Hooks系统与事件处理](/posts/claude-code-hooks-system-event-driven-intelligent-development-workflow/)
+- [MCP协议：连接外部工具的桥梁](/posts/claude-code-mcp-protocol-comprehensive-guide-ai-development-ecosystem/)
+- [监控与运维：生产环境最佳实践](/posts/claude-code-intelligent-monitoring-operations-production-environment-best-practices/)
+- [性能优化与调试技巧](#) <!-- 这篇文章还未找到对应的permalink -->
 
 ---
 

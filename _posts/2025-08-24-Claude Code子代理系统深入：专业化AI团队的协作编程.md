@@ -1232,10 +1232,10 @@ GROUP BY user_id;
 
 ## 相关文章推荐
 
-- [自定义命令与工作流](17-自定义命令与工作流.md)
-- [内存管理与上下文优化](19-内存管理与上下文优化.md)
-- [钩子Hooks系统与事件处理](20-钩子Hooks系统与事件处理.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
+- [自定义命令与工作流](/posts/claude-code-custom-commands-workflow-personalized-ai-programming-assistant/)
+- [内存管理与上下文优化](/posts/claude-code-memory-management-context-optimization-long-term-ai-programming-partner/)
+- [钩子Hooks系统与事件处理](/posts/claude-code-hooks-system-event-driven-intelligent-development-workflow/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
 
 ---
 

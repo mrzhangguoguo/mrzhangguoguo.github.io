@@ -771,7 +771,7 @@ claude --system-check
 
 安装完成只是AI编程之旅的开始。接下来，我建议你：
 
-1. **立即尝试**：阅读[《首次使用：创建你的第一个项目》](03-首次使用创建第一个项目.md)
+1. **立即尝试**：阅读[《首次使用：创建你的第一个项目》](/posts/claude-code-first-steps-10min-full-project/)
 2. **深入了解**：学习[《界面布局与基本操作》](/posts/claude-code-ui-operations-mastery/)  
 3. **掌握核心**：理解[《AI编程工作流核心概念》](/posts/claude-code-core-concepts-workflow/)
 

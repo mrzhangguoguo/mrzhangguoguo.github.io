@@ -472,10 +472,10 @@ SMART任务分解原则:
 
 ## 相关文章推荐
 
-- [多语言支持：Python、JavaScript、Go等](14-多语言支持Python-JavaScript-Go等.md)
-- [扩展思考Extended Thinking功能详解](16-扩展思考Extended-Thinking功能详解.md)
-- [自定义命令与工作流](17-自定义命令与工作流.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
+- [多语言支持：Python、JavaScript、Go等](/posts/claude-code-multi-language-support-python-javascript-go-fullstack-development/)
+- [扩展思考Extended Thinking功能详解](/posts/claude-code-extended-thinking-deep-analysis-ai-thinking-partner/)
+- [自定义命令与工作流](/posts/claude-code-custom-commands-workflow-personalized-ai-programming-assistant/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
 
 ---
 

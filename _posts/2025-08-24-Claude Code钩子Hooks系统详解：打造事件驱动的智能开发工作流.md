@@ -876,10 +876,10 @@ const performanceMonitor = {
 
 ## 相关文章推荐
 
-- [内存管理与上下文优化](19-内存管理与上下文优化.md)
-- [高级配置与性能调优](21-高级配置与性能调优.md)
-- [CI/CD集成：持续集成持续部署](24-CICD集成持续集成持续部署.md)
-- [团队协作：多人开发环境配置](23-团队协作多人开发环境配置.md)
+- [内存管理与上下文优化](/posts/claude-code-memory-management-context-optimization-long-term-ai-programming-partner/)
+- [高级配置与性能调优](/posts/claude-code-advanced-configuration-performance-tuning-maximum-potential/)
+- [CI/CD集成：持续集成持续部署](/posts/claude-code-cicd-integration-intelligent-continuous-integration-deployment/)
+- [团队协作：多人开发环境配置](/posts/claude-code-team-collaboration-configuration-ai-driven-development-environment/)
 
 ---
 
