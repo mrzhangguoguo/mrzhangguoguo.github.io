@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # De-prioritize or block non-content paths
-Disallow: /tags/
+# 允许标签页被索引（已修复 404）
 Disallow: /preview.html
 Disallow: /preview-post.html
 Disallow: /test/

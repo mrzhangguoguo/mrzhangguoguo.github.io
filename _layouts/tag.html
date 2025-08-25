@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+{% assign tag_name = page.tag %}
+
+<section class="tag-header">
+  <h1 class="post-title">#{{ tag_name }}</h1>
+  <p class="post-excerpt">包含该标签的文章与播客列表。</p>
+  <p><a href="/tags/">← 返回所有标签</a></p>
+</section>
+
+<div class="content-with-sidebar">
+  <div class="home-content">
+    <section class="recent-posts">
+      <h2>相关文章</h2>
+      {% assign filtered_posts = site.posts | where_exp: "p", "p.tags contains tag_name and p.draft != true" %}
+      {% if filtered_posts.size > 0 %}
+        <div class="post-list">
+          {% for post in filtered_posts %}
+            <article class="post-card">
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <div class="post-meta">
+                <time datetime="{{ post.published_at | default: post.date | date_to_xmlschema }}">
+                  {{ post.published_at | default: post.date | date: "%Y年%-m月%-d日" }}
+                </time>
+                {% if post.tags and post.tags.size > 0 %}
+                  <div class="tags">
+                    {% for t in post.tags limit: 3 %}
+                      <span class="tag">#{{ t }}</span>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+              {% if post.excerpt %}
+                <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+              {% endif %}
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>暂无相关文章。</p>
+      {% endif %}
+    </section>
+
+    <section class="recent-episodes">
+      <h2>相关播客</h2>
+      {% assign filtered_eps = site.episodes | where_exp: "e", "e.tags contains tag_name and e.draft != true" %}
+      {% if filtered_eps.size > 0 %}
+        <div class="episode-list">
+          {% for ep in filtered_eps %}
+            <article class="episode-card">
+              <h3><a href="{{ ep.url | relative_url }}">{{ ep.title }}</a></h3>
+              <div class="episode-meta">
+                <time datetime="{{ ep.published_at | default: ep.date | date_to_xmlschema }}">
+                  {{ ep.published_at | default: ep.date | date: "%Y年%-m月%-d日" }}
+                </time>
+                {% if ep.duration_sec %}
+                  <span class="duration">{{ ep.duration_sec | divided_by: 60 }} min</span>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% else %}
+        <p>暂无相关播客。</p>
+      {% endif %}
+    </section>
+  </div>
+
+  {% include home-sidebar.html %}
+</div>
+
