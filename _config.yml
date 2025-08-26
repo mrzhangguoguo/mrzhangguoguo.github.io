@@ -10,7 +10,7 @@ wechat_qr: "/assets/images/qrcode_for_gh_9052aff0c5b8_258.jpg"
 # Optional site-wide OG image (overridable per page via `og_image`)
 # og_image: "/assets/images/og-default.png"
 # 主页横幅图：AI科技风格背景，完美契合"果叔AI世界"主题
-hero_image: "/assets/images/hero-banner.jpg"
+hero_image: "/assets/images/151231231 2 (1).png"
 
 plugins:
   - jekyll-feed
