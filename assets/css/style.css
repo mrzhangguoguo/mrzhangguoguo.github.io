@@ -195,38 +195,78 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Hero with banner background */
+/* Hero with banner background - Optimized for AI Tech theme */
 .hero.has-banner {
   position: relative;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: var(--radius-lg);
-  min-height: 320px;
-  padding: 4rem 1rem;
+  min-height: 400px;
+  padding: 5rem 1rem;
   overflow: hidden;
+  /* Enhanced for AI tech background */
+  background-attachment: scroll;
 }
 
 .hero.has-banner::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35));
+  /* Lighter overlay to showcase the AI tech background */
+  background: linear-gradient(
+    135deg, 
+    rgba(0,0,0,0.2) 0%, 
+    rgba(0,0,0,0.3) 50%,
+    rgba(0,0,0,0.2) 100%
+  );
 }
 
 .hero.has-banner .hero-inner {
   position: relative;
   z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero.has-banner h1,
-.hero.has-banner .hero-description {
+.hero.has-banner h1 {
   color: #fff;
   -webkit-text-fill-color: initial;
   background: none;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  /* AI theme gradient text effect */
+  background: linear-gradient(135deg, #64b5f6, #e1bee7, #81c784);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero.has-banner .hero-description {
+  color: rgba(255,255,255,0.95);
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .hero.has-banner { 
+    min-height: 480px; 
+    padding: 6rem 2rem;
+  }
+  .hero.has-banner h1 {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 1200px) {
-  .hero.has-banner { min-height: 400px; }
+  .hero.has-banner { 
+    min-height: 520px;
+    padding: 7rem 2rem;
+  }
 }
 
 /* Content with Sidebar Layout */
